@@ -10,6 +10,14 @@
   margin-right: 32px;
 }
 
+.bubble-count{
+  top: 1px !important;
+  left: -1px !important;
+  right: 0px !important;
+  bottom: 0px !important;
+  background: transparent !important;
+  color: black !important;
+}
 
 
 /* ------------ END CUSTOM CSS ------------ */

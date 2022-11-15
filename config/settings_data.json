@@ -61,7 +61,7 @@
           "mobile_logo_max_width": 100,
           "navigation_menu": "main-menu",
           "secondary_menu": true,
-          "navigation_menu_last": "main-menu",
+          "navigation_menu_last": "main-menu2",
           "sidebar_navigation_menu": "",
           "header_layout": "logo_center_navigation_inline",
           "show_icons": true,

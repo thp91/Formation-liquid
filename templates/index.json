@@ -7,6 +7,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Group_3220.png",
+            "mobile_image": "shopify:\/\/shop_images\/image_110.png",
             "block_position": "middle_right",
             "text_alignment": "left",
             "subheading": "Anti-âge Premium contient des composés antioxydants et anti-inflammatoires qui aident à régénérer, protéger et apaiser les peaux matures.",
@@ -17,6 +18,7 @@
             "button_2_link": "",
             "text_color": "#282828",
             "button_background": "#ffffff",
+            "button_border": "#000000",
             "button_text_color": "#000000",
             "overlay_color": "#000000",
             "overlay_opacity": 0
@@ -34,13 +36,20 @@
         "background": "rgba(0,0,0,0)"
       }
     },
+    "3e8f72d6-388c-4f3f-8f19-b58a86ead805": {
+      "type": "logo-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_2977_bd97d382-6708-4235-96b5-d25975aa57da.png",
+        "title": "INLISSA, l’alchimiste moderne qui libère votre potentiel."
+      }
+    },
     "featured-collections": {
       "type": "featured-collections",
       "blocks": {
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "beaute",
             "label": "",
             "button_text": "",
             "button_url": ""
@@ -54,7 +63,7 @@
         "subheading": "Your title",
         "title": "Collection",
         "content": "",
-        "products_count": 8,
+        "products_count": 4,
         "products_per_row": 4,
         "stack_products": true,
         "show_cta": false,
@@ -421,6 +430,7 @@
   },
   "order": [
     "slideshow",
+    "3e8f72d6-388c-4f3f-8f19-b58a86ead805",
     "featured-collections",
     "image-with-text",
     "shop-the-look",

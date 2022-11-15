@@ -47,6 +47,18 @@
   margin-bottom: 0 !important;
 }
 
+/* Featured collection -> Product item */
+
+.product-item-meta p{
+  margin: 0;
+  font-style: italic;
+  color: #131313;
+}
+
+.product-item-meta a{
+  font-weight: 700;
+}
+
 
 /* ------------ END CUSTOM CSS ------------ */
 

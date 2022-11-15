@@ -43,34 +43,69 @@
         "title": "INLISSA, l’alchimiste moderne qui libère votre potentiel."
       }
     },
-    "featured-collections": {
-      "type": "featured-collections",
+    "87c4793c-8f36-41f2-b030-f80a62f559a2": {
+      "type": "multi-column",
       "blocks": {
-        "collection-1": {
-          "type": "collection",
+        "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-0": {
+          "type": "item",
           "settings": {
-            "collection": "beaute",
-            "label": "",
-            "button_text": "",
-            "button_url": ""
+            "image": "shopify:\/\/shop_images\/image_88_5bec77c5-966f-490b-8047-f65fb1ebb648.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Beauté",
+            "content": "",
+            "link_text": "DÉCOUVRIR",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_79_1.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Santé",
+            "content": "",
+            "link_text": "DÉCOUVRIR",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_84_1.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Offres",
+            "content": "",
+            "link_text": "DÉCOUVRIR",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
           }
         }
       },
       "block_order": [
-        "collection-1"
+        "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-0",
+        "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-1",
+        "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-2"
       ],
       "settings": {
-        "subheading": "Your title",
-        "title": "Collection",
+        "reveal_on_scroll": true,
+        "stack_items": true,
+        "subheading": "",
+        "title": "",
         "content": "",
-        "products_count": 4,
-        "products_per_row": 4,
-        "stack_products": true,
-        "show_cta": false,
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "large",
+        "spacing": "tight",
         "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
-        "button_background": "rgba(0,0,0,0)",
-        "button_text_color": "rgba(0,0,0,0)"
+        "text_color": "rgba(0,0,0,0)"
       }
     },
     "image-with-text": {
@@ -431,7 +466,7 @@
   "order": [
     "slideshow",
     "3e8f72d6-388c-4f3f-8f19-b58a86ead805",
-    "featured-collections",
+    "87c4793c-8f36-41f2-b030-f80a62f559a2",
     "image-with-text",
     "shop-the-look",
     "blog-posts",

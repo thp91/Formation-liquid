@@ -11025,16 +11025,10 @@ input:checked + .popover__choice-label::after,
 
 .multi-column__image-wrapper {
   display: block;
-  margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 10px;
   border-radius: min(8px, var(--block-border-radius));
   overflow: hidden;
   z-index: 0; /* Creating new stacking context is needed on Safari to apply the border radius */
-}
-
-.multi-column__image-wrapper:only-child {
-  margin-bottom: 0;
 }
 
 .multi-column__image {
@@ -11138,10 +11132,6 @@ input:checked + .popover__choice-label::after,
 
   .multi-column__inner:not(.is-scrollable) + .multi-column__prev-next {
     display: none;
-  }
-
-  .multi-column__image-wrapper {
-    margin-bottom: 24px;
   }
 
   .multi-column__prev-next {

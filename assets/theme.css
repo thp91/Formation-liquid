@@ -23,6 +23,18 @@
   color: black !important;
 }
 
+/* Logo with text */
+
+.logo-with-text{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 30px 0;
+}
+
+.logo-with-text_title{
+  width: 450px;
+}
 
 /* ------------ END CUSTOM CSS ------------ */
 
@@ -790,7 +802,8 @@ p a:not(.button),
 .h6,
 .rte h6 {
   font-size: var(--heading-h6-font-size);
-  line-height: 1.25;
+  line-height: 25px;
+  font-weight: 400;
 }
 
 .blockquote,

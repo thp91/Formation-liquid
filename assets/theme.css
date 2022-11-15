@@ -1763,9 +1763,6 @@ p + .button-group,
 .section__header {
   max-width: 1000px;
   margin-bottom: min(32px, var(--vertical-breather));
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
 }
 
 .section__header:only-child {
@@ -12867,7 +12864,6 @@ shopify-payment-terms {
   flex-direction: column;
   justify-content: flex-start;
   flex-grow: 1;
-  text-align: center;
 }
 
 .product-item__info--with-button {

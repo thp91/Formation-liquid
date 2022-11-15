@@ -36,29 +36,11 @@
             "overlay_color": "#000000",
             "overlay_opacity": 30
           }
-        },
-        "f832ae1a-b70d-4d29-9598-6d6ec28bded0": {
-          "type": "image",
-          "settings": {
-            "text_position": "middle_center",
-            "subheading": "Tell your story",
-            "title": "Slide title",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
         }
       },
       "block_order": [
         "slide-1",
-        "slide-2",
-        "f832ae1a-b70d-4d29-9598-6d6ec28bded0"
+        "slide-2"
       ],
       "settings": {
         "section_height": "auto",

@@ -112,6 +112,7 @@ IMPLEMENTATION NOTE: the header in Focal is pretty complex as it allows a lot of
 
 <store-header {% if section.settings.enable_sticky_header %}sticky{% endif %} {% if request.page_type == 'index' and section.settings.enable_transparent_header %}transparent{% endif %} class="header {% if settings.background == settings.header_background %}header--bordered{% endif %} {% if request.page_type == 'index' and section.settings.enable_transparent_header %}header--transparent{% endif %}" role="banner">
   {%- assign menu = section.settings.navigation_menu -%}
+  {%- assign menu_last = section.settings.navigation_menu_last -%}
 
   <div class="container">
     <div class="header__wrapper">
@@ -173,6 +174,11 @@ IMPLEMENTATION NOTE: the header in Focal is pretty complex as it allows a lot of
 
       <!-- SECONDARY LINKS PART -->
       <div class="header__secondary-links">
+        {% if section.settings.secondary_menu %}
+        <div class="header__secondary-menu">
+        {%- render 'desktop-menu', menu: menu_last -%}
+        </div>
+        {% endif %}
         {%- if section.settings.show_country_selector and localization.available_countries.size > 1 -%}
           {%- assign country_selector = true -%}
         {%- endif -%}
@@ -436,6 +442,18 @@ SEARCH DRAWER
       "type": "link_list",
       "id": "navigation_menu",
       "label": "Menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "secondary_menu",
+      "label": "Secondary Menu",
+      "default": false
+    },
+    {
+      "type": "link_list",
+      "id": "navigation_menu_last",
+      "label": "Second menu",
       "default": "main-menu"
     },
     {

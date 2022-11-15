@@ -7,7 +7,8 @@
     "secondary_background": "#f5f5f5",
     "success_color": "#2e9e7b",
     "error_color": "#de2a2a",
-    "header_background": "#282828",
+    "header_background": "#ffffff",
+    "header_text_color": "#282828",
     "footer_background": "#282828",
     "footer_text_color": "#ffffff",
     "primary_button_background": "#405de6",
@@ -41,16 +42,6 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
-        "blocks": {
-          "message-1": {
-            "type": "message",
-            "settings": {
-            }
-          }
-        },
-        "block_order": [
-          "message-1"
-        ],
         "settings": {
           "announcement_bar_position": "non_sticky",
           "announcement_text_size": "normal",
@@ -66,12 +57,21 @@
         "type": "header",
         "settings": {
           "enable_sticky_header": true,
+          "logo_max_width": 140,
+          "mobile_logo_max_width": 100,
           "navigation_menu": "main-menu",
-          "header_layout": "logo_left_navigation_center",
-          "show_icons": false,
+          "secondary_menu": true,
+          "navigation_menu_last": "main-menu",
+          "sidebar_navigation_menu": "",
+          "header_layout": "logo_center_navigation_inline",
+          "show_icons": true,
           "reduce_desktop_padding": false,
+          "show_locale_selector": true,
+          "show_country_selector": false,
           "enable_transparent_header": false,
-          "transparent_header_text_color": "#ffffff"
+          "transparent_header_text_color": "#282828",
+          "transparent_logo": "shopify:\/\/shop_images\/Group_5.png",
+          "search_menu": ""
         }
       },
       "footer": {
@@ -80,6 +80,8 @@
           "text": {
             "type": "text",
             "settings": {
+              "title": "About our store",
+              "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.<\/p>"
             }
           },
           "links": {
@@ -91,11 +93,15 @@
           "newsletter": {
             "type": "newsletter",
             "settings": {
+              "title": "Newsletter",
+              "content": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
             }
           },
           "social_media": {
             "type": "social_media",
             "settings": {
+              "title": "Follow us",
+              "content": "<p>To configure social media, go to your social media settings. Change this text in the theme editor.<\/p>"
             }
           }
         },
@@ -106,9 +112,41 @@
           "social_media"
         ],
         "settings": {
+          "show_payment_icons": true,
+          "show_country_selector": true,
+          "show_locale_selector": true,
+          "show_cookie_bar": false,
+          "cookie_bar_title": "Cookie policy",
+          "cookie_bar_content": "<p>I agree to the processing of my data in accordance with the conditions set out in the policy of Privacy.<\/p>"
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "settings": {
+          "enable": false,
+          "apparition_delay": 5,
+          "show_only_on_index": true,
+          "show_only_for_visitors": true,
+          "show_only_once": true,
+          "image_position": "left",
+          "title": "Get 10% off",
+          "content": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>"
+        }
+      },
+      "mini-cart": {
+        "type": "mini-cart",
+        "settings": {
+          "show_order_note": true,
+          "show_checkout_button": true,
+          "empty_button_link": "shopify:\/\/collections\/all",
+          "show_recommendations": true,
+          "recommendations_title": "You may also like"
         }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Carbon": {

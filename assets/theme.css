@@ -4,8 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
 
-*{
-  font-family: 'Work Sans', sans-serif;
+*:not(i){
+  font-family: 'Work Sans', sans-serif !important;
 }
 
 /* Header */
@@ -35,6 +35,18 @@
 .logo-with-text_title{
   width: 450px;
 }
+
+/* Multi column */
+
+.multi-column__text-container a{
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.multi-column__text-container p{
+  margin-bottom: 0 !important;
+}
+
 
 /* ------------ END CUSTOM CSS ------------ */
 
@@ -1282,7 +1294,7 @@ p a:not(.button),
 
 .text-container .heading--small,
 .rte .heading--small {
-  margin: 16px 0;
+  margin: 10px 0;
 }
 
 .text-container .heading--xsmall,

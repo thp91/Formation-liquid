@@ -60,6 +60,23 @@
 }
 
 
+.product-item__image-wrapper{
+  margin-bottom: 10px !important;
+}
+
+.product-item__quick-form{
+  background-color: #fff;
+  padding: 20px 0;
+  z-index: 999;
+}
+
+.product-item__quick-form .button{
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+
 /* ------------ END CUSTOM CSS ------------ */
 
 
@@ -5074,26 +5091,7 @@ select:focus,
  * size is extremely small, this did not cause any visible slugger animation.
  */
 @media screen and (pointer: fine) {
-  .button,
-  .shopify-challenge__button,
-  #shopify-product-reviews .spr-summary-actions-newreview,
-  #shopify-product-reviews .spr-button,
-  .shopify-payment-button__button {
-    background-image: linear-gradient(178deg, rgb(var(--button-background)), rgb(var(--button-background)) 10%, rgba(0, 0, 0, 0.07) 10%, rgba(0, 0, 0, 0.07) 100%), linear-gradient(rgb(var(--button-background)), rgb(var(--button-background)));
-    background-size: 100% 200%, 100% 100%;
-    background-position: 100% -100%, 100% 100%;
-    background-repeat: no-repeat;
-    transition: background-position 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translateZ(0); /* Make sure to promote the button on its own layer */
-  }
 
-  .button:hover,
-  .shopify-challenge__button:hover,
-  #shopify-product-reviews .spr-summary-actions-newreview:hover,
-  #shopify-product-reviews .spr-button:hover,
-  .shopify-payment-button__button:hover {
-    background-position: 100% 25%, 100% 100%;
-  }
 
   /* Only on super modern browsers, allow to automatically switch to a white color based on contrast */
   @supports (color: color-contrast(wheat vs black, white)) and (color: rgb(from wheat r g b / 0.07)) {
@@ -12824,7 +12822,6 @@ shopify-payment-terms {
   position: relative;
   display: block;
   margin-bottom: 16px;
-  overflow: hidden;
 }
 
 .product-item__image-wrapper--placeholder {
@@ -12896,8 +12893,7 @@ shopify-payment-terms {
 
 .product-item__quick-form {
   position: absolute;
-  padding: 10px;
-  bottom: 0;
+  bottom: -90px;
   width: 100%;
   visibility: hidden;
   opacity: 0;

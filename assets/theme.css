@@ -2,7 +2,11 @@
 
 /* General */
 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
 
+*{
+  font-family: 'Work Sans', sans-serif;
+}
 
 /* Header */
 
@@ -499,7 +503,7 @@ p b {
   font-weight: var(--heading-font-weight);
   font-style: var(--heading-font-style);
   color: rgb(var(--heading-color));
-  text-transform: var(--heading-text-transform);
+  /* text-transform: var(--heading-text-transform); */
 }
 
 .text--small {
@@ -720,7 +724,7 @@ p a:not(.button),
 .heading--xxsmall {
   font-family: var(--text-font-family);
   font-style: var(--text-font-style);
-  text-transform: uppercase; /* Small headings are always uppercase */
+  /* text-transform: uppercase; */
   font-weight: var(--text-font-bold-weight);
   line-height: 1.4663636;
   letter-spacing: 1px;
@@ -736,13 +740,15 @@ p a:not(.button),
 
 .heading--small {
   font-size: var(--heading-small-font-size);
-  line-height: 1.5; /* Slightly bigger line height */
+  line-height: 26px;
+  font-weight: 400; /* Slightly bigger line height */
+  color: #000000;
 }
 
 .heading--large,
 .rte .heading--large {
-  font-size: var(--heading-large-font-size);
-  line-height: 1.11111111;
+  font-size: var(--heading-h1-font-size);
+  line-height: 55px;
   letter-spacing: -0.9px;
 }
 
@@ -5282,7 +5288,7 @@ select:focus,
   }
 
   .content-box--medium {
-    width: calc(var(--grid-column-width) * 10 + var(--grid-gap) * 9);
+    width: 550px;
   }
 
   .content-box--small {

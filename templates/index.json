@@ -6,41 +6,25 @@
         "slide-1": {
           "type": "image",
           "settings": {
-            "text_position": "middle_center",
-            "subheading": "Tell your story",
-            "title": "Slide 1",
-            "button_1_text": "",
+            "image": "shopify:\/\/shop_images\/Group_3220.png",
+            "block_position": "middle_right",
+            "text_alignment": "left",
+            "subheading": "Anti-âge Premium contient des composés antioxydants et anti-inflammatoires qui aident à régénérer, protéger et apaiser les peaux matures.",
+            "title": "Le nouvel elixir d’avenir au service de votre beauté.",
+            "button_1_text": "JE REPULPE MA PEAU",
             "button_1_link": "",
             "button_2_text": "",
             "button_2_link": "",
-            "text_color": "#ffffff",
+            "text_color": "#282828",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "slide-2": {
-          "type": "image",
-          "settings": {
-            "text_position": "middle_center",
-            "subheading": "Tell your story",
-            "title": "Slide 2",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 0
           }
         }
       },
       "block_order": [
-        "slide-1",
-        "slide-2"
+        "slide-1"
       ],
       "settings": {
         "section_height": "auto",

@@ -57,6 +57,7 @@
         "type": "header",
         "settings": {
           "enable_sticky_header": true,
+          "logo": "shopify:\/\/shop_images\/Group_2730_c3691a2e-8c9b-460c-b9d0-2369d41cb650.png",
           "logo_max_width": 140,
           "mobile_logo_max_width": 100,
           "navigation_menu": "main-menu",

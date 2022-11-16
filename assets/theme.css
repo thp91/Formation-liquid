@@ -129,6 +129,12 @@
   border-radius: 50% !important;
 }
 
+/* Newsletter */
+
+.newsletter__form{
+  margin-bottom: 32px;
+}
+
 
 
 /* ------------ END CUSTOM CSS ------------ */

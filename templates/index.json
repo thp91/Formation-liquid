@@ -380,7 +380,8 @@
         "subheading": "",
         "title": "",
         "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
+        "text_color": "rgba(0,0,0,0)",
+        "item_color": "rgba(0,0,0,0)"
       }
     },
     "26e3e7bb-6bab-4567-a639-01447d372873": {
@@ -401,12 +402,14 @@
       "type": "newsletter",
       "settings": {
         "reveal_on_scroll": true,
-        "subheading": "Subscribe to our newsletter",
-        "content": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
+        "image": "shopify:\/\/shop_images\/Rectangle_862_e4f487cf-9d26-4128-ab8a-88131c1c7752.png",
+        "title": "Restons en contact",
+        "subheading": "Pour en savoir plus, consultez notre Politique de protection des données personnelles.",
+        "content": "<p>Profitez dès maintenant d'une remise de -10% sur votre prochaine commande en vous inscrivant à notre Newsletter !<\/p>",
         "text_position": "right",
-        "text_alignment": "left",
-        "text_background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
+        "text_alignment": "center",
+        "text_background": "#000000",
+        "text_color": "#ffffff",
         "button_background": "rgba(0,0,0,0)",
         "button_text_color": "rgba(0,0,0,0)"
       }

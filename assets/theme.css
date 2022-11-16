@@ -23,6 +23,12 @@
   color: black !important;
 }
 
+/* Slideshow */
+
+button--transparent{
+  background-color: transparent;
+}
+
 /* Logo with text */
 
 .logo-with-text{

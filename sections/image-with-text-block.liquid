@@ -102,7 +102,7 @@
 
             {%- if section.settings.button_text != blank -%}
               <div class="button-wrapper">
-                <a href="{{ section.settings.button_link }}" class="button button--primary">{{ section.settings.button_text | escape }}</a>
+                <a href="{{ section.settings.button_link }}" class="button {% if section.settings.button_background == "rgba(0,0,0,0)" %}button--transparent{% else %}button--primary{% endif %}" style="border: 1px solid {{ section.settings.button_border }};">{{ section.settings.button_text | escape }}</a>
               </div>
             {%- endif -%}
           </div>
@@ -249,6 +249,12 @@
       "type": "color",
       "id": "button_background",
       "label": "Button background",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "button_border",
+      "label": "Button Border",
       "default": "rgba(0,0,0,0)"
     },
     {

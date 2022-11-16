@@ -11199,7 +11199,7 @@ input:checked + .popover__choice-label::after,
   }
 
   .multi-column--pocket-medium {
-    --section-items-per-row: 4;
+    --section-items-per-row: 3;
   }
 
   .multi-column--pocket-large {

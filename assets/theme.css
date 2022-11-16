@@ -11085,14 +11085,15 @@ input:checked + .popover__choice-label::after,
 
 .multi-column--pocket-medium,
 .multi-column--pocket-large {
-  --section-items-per-row: 1;
+  --section-items-per-row: 2;
 }
 
 .multi-column__inner {
   display: grid;
   grid-template-columns: repeat(auto-fit, var(--item-width));
-  grid-gap: var(--multi-column-row-gap) var(--multi-column-column-gap);
-  gap: var(--multi-column-row-gap) var(--multi-column-column-gap);
+  /* grid-gap: var(--multi-column-row-gap) var(--multi-column-column-gap); */
+  /* gap: var(--multi-column-row-gap) var(--multi-column-column-gap); */
+  column-gap: 10px;
   justify-content: safe center;
   padding-bottom: 2px; /* This allows to allocate extra space and make sure that link border are not hidden */
 }

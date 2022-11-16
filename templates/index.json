@@ -156,9 +156,10 @@
         "text_position": "left",
         "text_alignment": "left",
         "text_color": "#ffffff",
-        "button_background": "rgba(0,0,0,0)",
+        "button_background": "#131313",
         "button_border": "#faf8f7",
-        "button_text_color": "#282828"
+        "background_color": "#131313",
+        "button_text_color": "#faf8f7"
       }
     },
     "9f5154a7-0c14-45bf-a733-4ee5396261d0": {
@@ -198,6 +199,7 @@
       "settings": {
         "reveal_on_scroll": true,
         "image": "shopify:\/\/shop_images\/Group_3222.png",
+        "mobile_image": "shopify:\/\/shop_images\/Group_3202_rogn.png",
         "subheading": "Profitez d’une remise de 30% pour l’achat d’un pack duo !",
         "title": "Composez votre pack sur mesure",
         "content": "",
@@ -207,8 +209,9 @@
         "text_position": "right",
         "text_alignment": "left",
         "text_color": "rgba(0,0,0,0)",
-        "button_background": "#ffffff",
-        "button_border": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_border": "#282828",
+        "background_color": "#f0eae6",
         "button_text_color": "#000000"
       }
     },

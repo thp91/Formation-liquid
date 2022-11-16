@@ -102,7 +102,7 @@
               </div>
             </div> {% endcomment %}
 
-            <div class="input" style="background-color:{{ section.settings.input_background_color }};">
+            <div class="input" style="background-color:{{ section.settings.input_background_color }}; color:{{ section.settings.input_text_color }};">
               <input type="email" id="newsletter[{{ section.id }}][contact][email]" name="contact[email]" class="input__field" required>
               <label for="newsletter[{{ section.id }}][contact][email]" class="input__label" style="background-color:{{ section.settings.input_background_color }}; color:{{ section.settings.input_text_color }}">{{ 'general.newsletter.email' | t }}</label>
               <button type="submit" is="loader-button" class="input__submit-icon tap-area" title="{{ 'footer.newsletter.submit' | t }}" style="color:{{ section.settings.input_text_color }};">{% render 'icon' with 'nav-arrow-right', direction_aware: true %}</button>

@@ -98,10 +98,15 @@ button--transparent{
   margin-bottom: 10px !important;
 }
 
-.product-item__quick-form{
-  background-color: #fff;
-  padding: 20px 0;
-  z-index: 999;
+@media screen and (min-width: 740px){
+  .product-item__quick-form{
+    background-color: #fff;
+    padding: 20px 0;
+    z-index: 999;
+  }
+  .product-item__quick-form{
+    bottom: -90px !important;
+  }
 }
 
 .product-item__quick-form .button{
@@ -127,6 +132,12 @@ button--transparent{
 .image-with-text-block__text-container ul li{
   list-style-type: "\29EB";
   font-weight: 700;
+}
+
+@media screen and (max-width: 999px){
+.custom-bg{
+  background-color: var(--custom-bgc) !important;
+}
 }
 
 /* Testimonials */
@@ -4557,6 +4568,7 @@ select:focus,
   color: rgba(var(--text-color), 0.7);
   line-height: 1;
   white-space: nowrap;
+  border-radius: 20px;
 }
 
 :focus-within ~ .input__label,
@@ -12984,7 +12996,7 @@ shopify-payment-terms {
 
 .product-item__quick-form {
   position: absolute;
-  bottom: -90px;
+  bottom: 0;
   width: 100%;
   visibility: hidden;
   opacity: 0;

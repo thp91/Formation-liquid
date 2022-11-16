@@ -32,6 +32,8 @@
     --primary-button-background: {{ button_background.red }}, {{ button_background.green }}, {{ button_background.blue }};
     --primary-button-text-color: {{ button_text_color.red }}, {{ button_text_color.green }}, {{ button_text_color.blue }};
 
+    --custom-bgc: {{ section.settings.background_color }};
+
     --prev-next-button-background: {{ settings.background.red }}, {{ settings.background.green }}, {{ settings.background.blue }};
     --prev-next-button-color: {{ settings.text_color.red }}, {{ settings.text_color.green }}, {{ settings.text_color.blue }};
 
@@ -81,7 +83,7 @@
       {%- capture section_content -%}
         {%- assign text_position = section.settings.text_position | split: '_' | last -%}
 
-        <div {% if section.settings.reveal_on_scroll %}reveal{% endif %} class="image-with-text-block__content content-box content-box--small content-box--text-{{ section.settings.text_alignment}} content-box--{{ text_position }} text-container">
+        <div {% if section.settings.reveal_on_scroll %}reveal{% endif %} class="image-with-text-block__content content-box content-box--small content-box--text-{{ section.settings.text_alignment}} content-box--{{ text_position }} text-container {% unless section.settings.background_color == "rgba(0,0,0,0)" %}custom-bg{% endunless %}">
 
           {%- if section.settings.title != blank -%}
             <h3 class="heading h2">
@@ -255,6 +257,12 @@
       "type": "color",
       "id": "button_border",
       "label": "Button Border",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
       "default": "rgba(0,0,0,0)"
     },
     {

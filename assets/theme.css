@@ -140,6 +140,12 @@ button--transparent{
 }
 }
 
+@media screen and (max-width: 999px){
+  .text-with-icons__list{
+    align-items: center;
+  }
+}
+
 /* Testimonials */
 
 .testimonial-list__prev-next-buttons button{

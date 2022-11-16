@@ -135,6 +135,12 @@
   margin-bottom: 32px;
 }
 
+/* Newsletter footer */
+
+.footer__item-content p{
+  margin-top: 10px;
+}
+
 
 
 /* ------------ END CUSTOM CSS ------------ */
@@ -239,7 +245,7 @@ body {
 blockquote:first-child,
 ul:first-child,
 ol:first-child,
-p:first-child,
+/* p:first-child, */
 h1:first-child,
 h2:first-child,
 h3:first-child,

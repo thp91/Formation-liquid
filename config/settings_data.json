@@ -4,13 +4,14 @@
     "block_border_radius": "none",
     "heading_color": "#282828",
     "text_color": "#282828",
+    "background": "#ffffff",
     "secondary_background": "#f5f5f5",
     "success_color": "#2e9e7b",
     "error_color": "#de2a2a",
     "header_background": "#ffffff",
     "header_text_color": "#282828",
-    "footer_background": "#282828",
-    "footer_text_color": "#ffffff",
+    "footer_background": "#ffffff",
+    "footer_text_color": "#000000",
     "primary_button_background": "#405de6",
     "secondary_button_background": "#f3ff34",
     "secondary_button_text_color": "#282828",
@@ -78,39 +79,38 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "text": {
-            "type": "text",
-            "settings": {
-              "title": "About our store",
-              "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.<\/p>"
-            }
-          },
           "links": {
             "type": "links",
             "settings": {
               "menu": "footer"
             }
           },
+          "b85615ec-ece4-4000-8477-21ee883220e8": {
+            "type": "links",
+            "settings": {
+              "menu": "la-marque"
+            }
+          },
+          "c0b0e020-b814-4dac-b7d3-5d7dc63fad5b": {
+            "type": "links",
+            "settings": {
+              "menu": "contact"
+            }
+          },
           "newsletter": {
             "type": "newsletter",
             "settings": {
-              "title": "Newsletter",
-              "content": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
-            }
-          },
-          "social_media": {
-            "type": "social_media",
-            "settings": {
-              "title": "Follow us",
-              "content": "<p>To configure social media, go to your social media settings. Change this text in the theme editor.<\/p>"
+              "logo": "shopify:\/\/shop_images\/Group_2730_c3691a2e-8c9b-460c-b9d0-2369d41cb650.png",
+              "title": "",
+              "content": "<p>Recevez des offres exclusives<br\/>et des conseils dans votre boîte mail<\/p>"
             }
           }
         },
         "block_order": [
-          "text",
           "links",
-          "newsletter",
-          "social_media"
+          "b85615ec-ece4-4000-8477-21ee883220e8",
+          "c0b0e020-b814-4dac-b7d3-5d7dc63fad5b",
+          "newsletter"
         ],
         "settings": {
           "show_payment_icons": true,

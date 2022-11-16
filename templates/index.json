@@ -97,6 +97,7 @@
       "settings": {
         "reveal_on_scroll": true,
         "stack_items": true,
+        "text_on_image": false,
         "subheading": "",
         "title": "",
         "content": "",
@@ -340,6 +341,7 @@
       "settings": {
         "reveal_on_scroll": true,
         "stack_items": true,
+        "text_on_image": true,
         "subheading": "",
         "title": "Quel est votre besoin ?",
         "content": "",
@@ -347,170 +349,6 @@
         "mobile_item_size": "medium",
         "desktop_item_size": "small",
         "spacing": "tight",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "image-with-text": {
-      "type": "image-with-text",
-      "blocks": {
-        "item-1": {
-          "type": "item",
-          "settings": {
-            "tab_label": "Text 1",
-            "subheading": "Subheading",
-            "title": "Image with text",
-            "content": "<p>Use image with text to give your customers insight into your brand. Select imagery and text that relates to your style and story.<\/p>",
-            "button_text": "",
-            "button_link": ""
-          }
-        },
-        "item-2": {
-          "type": "item",
-          "settings": {
-            "tab_label": "Text 2",
-            "subheading": "Subheading",
-            "title": "Image with text",
-            "content": "<p>Use image with text to give your customers insight into your brand. Select imagery and text that relates to your style and story.<\/p>",
-            "button_text": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "item-1",
-        "item-2"
-      ],
-      "settings": {
-        "reveal_on_scroll": true,
-        "background_type": "full_width",
-        "background_overlap": "image",
-        "image_position": "left",
-        "text_alignment": "center",
-        "cycle_speed": 8,
-        "accent_background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
-        "button_background": "rgba(0,0,0,0)",
-        "button_text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "shop-the-look": {
-      "type": "shop-the-look",
-      "blocks": {
-        "look-1": {
-          "type": "look",
-          "settings": {
-            "dot_type": "inverted",
-            "product_1": "",
-            "product_1_horizontal_position": 41,
-            "product_1_vertical_position": 41,
-            "product_1_horizontal_position_mobile": 30,
-            "product_1_vertical_position_mobile": 30,
-            "product_2": "",
-            "product_2_horizontal_position": 46,
-            "product_2_vertical_position": 64,
-            "product_2_horizontal_position_mobile": 50,
-            "product_2_vertical_position_mobile": 50,
-            "product_3": "",
-            "product_3_horizontal_position": 62,
-            "product_3_vertical_position": 50,
-            "product_3_horizontal_position_mobile": 70,
-            "product_3_vertical_position_mobile": 70
-          }
-        }
-      },
-      "block_order": [
-        "look-1"
-      ],
-      "settings": {
-        "reveal_on_scroll": true,
-        "label": "Shop the looks"
-      }
-    },
-    "blog-posts": {
-      "type": "blog-posts",
-      "settings": {
-        "blog": "",
-        "subheading": "Stay up-to-date",
-        "title": "Blog posts",
-        "articles_count": 3,
-        "stack_mobile": false,
-        "show_category": true,
-        "show_excerpt": false,
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "image-with-text-block": {
-      "type": "image-with-text-block",
-      "settings": {
-        "reveal_on_scroll": true,
-        "subheading": "Subheading",
-        "title": "Image with text block",
-        "content": "<p>Use block text to give your customers insight into your brand. Select impactful text that relates to your brand and story.<\/p>",
-        "button_text": "",
-        "button_link": "",
-        "background_type": "full_width",
-        "text_position": "left",
-        "text_alignment": "center",
-        "text_color": "rgba(0,0,0,0)",
-        "button_background": "rgba(0,0,0,0)",
-        "button_text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "collection-list": {
-      "type": "collection-list",
-      "blocks": {
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "subheading": "",
-            "title": "",
-            "link_text": "",
-            "link_url": "",
-            "text_color": "rgba(0,0,0,0)",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "collection-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "subheading": "",
-            "title": "",
-            "link_text": "",
-            "link_url": "",
-            "text_color": "rgba(0,0,0,0)",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "collection-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "subheading": "",
-            "title": "",
-            "link_text": "",
-            "link_url": "",
-            "text_color": "rgba(0,0,0,0)",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        }
-      },
-      "block_order": [
-        "collection-1",
-        "collection-2",
-        "collection-3"
-      ],
-      "settings": {
-        "reveal_on_scroll": false,
-        "layout": "collage",
-        "subheading": "Subheading",
-        "title": "Collection list",
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
@@ -524,10 +362,18 @@
             "content": "Write some content about what they are saying about your store.",
             "author": "John S."
           }
+        },
+        "3561531e-7980-4383-b5a5-8c8fdd1126bd": {
+          "type": "testimonial",
+          "settings": {
+            "content": "Write some content about what they are saying about your store.",
+            "author": "John S."
+          }
         }
       },
       "block_order": [
-        "testimonial-1"
+        "testimonial-1",
+        "3561531e-7980-4383-b5a5-8c8fdd1126bd"
       ],
       "settings": {
         "reveal_on_scroll": true,
@@ -537,160 +383,21 @@
         "text_color": "rgba(0,0,0,0)"
       }
     },
-    "timeline": {
-      "type": "timeline",
-      "blocks": {
-        "item-1": {
-          "type": "item",
-          "settings": {
-            "label": "2000",
-            "title": "Your heading",
-            "content": "<p>Write content about your store<\/p>",
-            "button_text": "",
-            "button_link": ""
-          }
-        },
-        "item-2": {
-          "type": "item",
-          "settings": {
-            "label": "2010",
-            "title": "Your heading",
-            "content": "<p>Write content about your store<\/p>",
-            "button_text": "",
-            "button_link": ""
-          }
-        },
-        "item-3": {
-          "type": "item",
-          "settings": {
-            "label": "2020",
-            "title": "Your heading",
-            "content": "<p>Write content about your store<\/p>",
-            "button_text": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "item-1",
-        "item-2",
-        "item-3"
-      ],
+    "26e3e7bb-6bab-4567-a639-01447d372873": {
+      "type": "blog-posts",
       "settings": {
-        "subheading": "Subheading",
-        "title": "Timeline",
-        "text_position": "middle",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
-        "item_background": "rgba(0,0,0,0)",
-        "item_text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "featured-product": {
-      "type": "featured-product",
-      "blocks": {
-        "variant-picker": {
-          "type": "variant_picker",
-          "settings": {
-            "hide_sold_out_variants": false,
-            "selector_mode": "block",
-            "color_mode": "color",
-            "size_chart_page": ""
-          }
-        },
-        "quantity-selector": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "buy-buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_payment_button": true,
-            "atc_button_background": "rgba(0,0,0,0)",
-            "atc_button_text_color": "rgba(0,0,0,0)",
-            "buy_now_button_background": "rgba(0,0,0,0)",
-            "buy_now_button_text_color": "rgba(0,0,0,0)"
-          }
-        }
-      },
-      "block_order": [
-        "variant-picker",
-        "quantity-selector",
-        "buy-buttons"
-      ],
-      "settings": {
-        "product": "",
-        "subheading": "Subheading",
-        "title": "Featured product",
-        "show_vendor": true,
-        "show_sku": false,
-        "show_taxes_included": false,
-        "show_product_rating": false,
-        "show_share_buttons": true,
-        "help_page": "",
-        "enable_video_autoplay": true,
-        "enable_video_looping": false,
-        "enable_image_zoom": true,
-        "show_thumbnails_on_mobile": false,
-        "desktop_thumbnails_position": "bottom",
-        "transition_effect": "slide",
+        "blog": "science",
+        "subheading": "Stay up-to-date",
+        "title": "Blog posts",
+        "articles_count": 4,
+        "stack_mobile": false,
+        "show_category": true,
+        "show_excerpt": true,
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
     },
-    "text-with-icons": {
-      "type": "text-with-icons",
-      "blocks": {
-        "item-1": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-box",
-            "custom_icon_width": 50,
-            "title": "Free shipping",
-            "content": "<p>Free worldwide shipping and returns - customs and duties taxes included<\/p>"
-          }
-        },
-        "item-2": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-phone",
-            "custom_icon_width": 50,
-            "title": "Customer service",
-            "content": "<p>We are available from monday to friday to answer your questions.<\/p>"
-          }
-        },
-        "item-3": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-lock",
-            "custom_icon_width": 50,
-            "title": "Secure payment",
-            "content": "<p>Your payment information is processed securely.<\/p>"
-          }
-        },
-        "item-4": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-email",
-            "custom_icon_width": 50,
-            "title": "Contact us",
-            "content": "<p>Need to contact us ? Just send us an e-mail at info@yourstore.com<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "item-1",
-        "item-2",
-        "item-3",
-        "item-4"
-      ],
-      "settings": {
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "newsletter": {
+    "2c79ed7c-f796-4f51-88cb-5da4322969fd": {
       "type": "newsletter",
       "settings": {
         "reveal_on_scroll": true,
@@ -702,6 +409,72 @@
         "text_color": "rgba(0,0,0,0)",
         "button_background": "rgba(0,0,0,0)",
         "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "5da158ea-74c3-400f-9979-6934aa37948c": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-0": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon": "shopify:\/\/shop_images\/Group_3162_e73a170c-cc4e-4122-9b76-41b3012027f7.png",
+            "custom_icon_width": 50,
+            "title": "LIVRAISON OFFERTE",
+            "content": "<p>À partir de 60€<\/p>"
+          }
+        },
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-phone",
+            "custom_icon": "shopify:\/\/shop_images\/Frame.png",
+            "custom_icon_width": 50,
+            "title": "FORMULATIONS CLEAN",
+            "content": "<p>Des actifs naturels, pas d’ingrédients controversés, ni de ‘conservateurs, édulcorants, colorants’. <\/p>"
+          }
+        },
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "custom_icon": "shopify:\/\/shop_images\/Group_3202.png",
+            "custom_icon_width": 50,
+            "title": "ACTIFS BREVETÉS",
+            "content": "<p>Issus des dernières innovations scientifiques<\/p>"
+          }
+        },
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-email",
+            "custom_icon": "shopify:\/\/shop_images\/Frame_1.png",
+            "custom_icon_width": 50,
+            "title": "BIODISPONIBILITÉS & DOSAGES OPTIMISÉS",
+            "content": "<p>L’efficacité avant tout<\/p>"
+          }
+        },
+        "cc0e2052-448e-448c-b19c-02e9c9b22dd6": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-customer-support",
+            "custom_icon": "shopify:\/\/shop_images\/Frame_2.png",
+            "custom_icon_width": 50,
+            "title": "MADE IN FRANCE",
+            "content": "<p>Une production<br\/>100% française<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-0",
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-1",
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-2",
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-3",
+        "cc0e2052-448e-448c-b19c-02e9c9b22dd6"
+      ],
+      "settings": {
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
       }
     }
   },
@@ -715,15 +488,9 @@
     "d2d8b79a-3e93-4b84-a01f-60209609cba5",
     "45971290-3f22-4524-b77f-f4904f7c75db",
     "a72678d4-db65-482e-b7b0-1e6a6a23a35e",
-    "image-with-text",
-    "shop-the-look",
-    "blog-posts",
-    "image-with-text-block",
-    "collection-list",
     "testimonials",
-    "timeline",
-    "featured-product",
-    "text-with-icons",
-    "newsletter"
+    "26e3e7bb-6bab-4567-a639-01447d372873",
+    "2c79ed7c-f796-4f51-88cb-5da4322969fd",
+    "5da158ea-74c3-400f-9979-6934aa37948c"
   ]
 }

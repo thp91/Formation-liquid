@@ -157,7 +157,7 @@
                   {%- endif -%}
 
                   {%- if block.settings.title != blank or block.settings.content != blank or block.settings.link_text != blank -%}
-                    <div class="multi-column__text-container text--{{ block.settings.text_alignment }} text-container">
+                    <div class="multi-column__text-container text--{{ block.settings.text_alignment }} text-container{% if section.settings.text_on_image %} on-image {% endif %}">
                       {%- if block.settings.title != blank -%}
                         <p class="heading h4">{{ block.settings.title | escape }}</p>
                       {%- endif -%}
@@ -321,6 +321,12 @@
       "type": "checkbox",
       "id": "stack_items",
       "label": "Stack items",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "text_on_image",
+      "label": "Text on image",
       "default": false
     },
     {

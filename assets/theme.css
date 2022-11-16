@@ -38,6 +38,10 @@
 
 /* Multi column */
 
+.multi-column__item{
+  position: relative;
+}
+
 .multi-column__text-container a{
   text-decoration: none;
   font-weight: 500;
@@ -45,6 +49,16 @@
 
 .multi-column__text-container p{
   margin-bottom: 0 !important;
+}
+
+.on-image{
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+
+.on-image a, .on-image p{
+  color: white;
 }
 
 /* Featured collection -> Product item */

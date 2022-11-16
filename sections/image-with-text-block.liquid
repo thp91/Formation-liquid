@@ -4,19 +4,8 @@
   {%- assign is_boxed = false -%}
 {%- endif -%}
 
-{%- if section.settings.text_background != settings.background and section.settings.text_background != 'rgba(0,0,0,0)' -%}
-  {%- assign blends_with_background = false -%}
-{%- else -%}
-  {%- assign blends_with_background = true -%}
-{%- endif -%}
-
 <style>
   #shopify-section-{{ section.id }} {
-    {%- if section.settings.text_background == 'rgba(0,0,0,0)' -%}
-      {%- assign section_block_background = settings.background -%}
-    {%- else -%}
-      {%- assign section_block_background = section.settings.text_background -%}
-    {%- endif -%}
 
     {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
       {%- assign heading_color = settings.heading_color -%}
@@ -93,16 +82,17 @@
         {%- assign text_position = section.settings.text_position | split: '_' | last -%}
 
         <div {% if section.settings.reveal_on_scroll %}reveal{% endif %} class="image-with-text-block__content content-box content-box--small content-box--text-{{ section.settings.text_alignment}} content-box--{{ text_position }} text-container">
-          {%- if section.settings.subheading != blank -%}
-            <h2 class="heading heading--small">
-              <split-lines {% if section.settings.reveal_on_scroll %}reveal{% endif %}>{{ section.settings.subheading | escape }}</split-lines>
-            </h2>
-          {%- endif -%}
 
           {%- if section.settings.title != blank -%}
-            <h3 class="heading h3">
+            <h3 class="heading h2">
               <split-lines {% if section.settings.reveal_on_scroll %}reveal{% endif %}>{{ section.settings.title | escape }}</split-lines>
             </h3>
+          {%- endif -%}
+
+          {%- if section.settings.subheading != blank -%}
+            <p>
+              <split-lines {% if section.settings.reveal_on_scroll %}reveal{% endif %}>{{ section.settings.subheading | escape }}</split-lines>
+            </p>
           {%- endif -%}
 
           <div class="image-with-text-block__text-container" {% if section.settings.reveal_on_scroll %}reveal{% endif %}>
@@ -167,10 +157,9 @@
       "default": "Image with text block"
     },
     {
-      "type": "richtext",
+      "type": "textarea",
       "id": "content",
-      "label": "Content",
-      "default": "<p>Use block text to give your customers insight into your brand. Select impactful text that relates to your brand and story.</p>"
+      "label": "Content"
     },
     {
       "type": "text",
@@ -249,12 +238,6 @@
     {
       "type": "header",
       "content": "Colors"
-    },
-    {
-      "type": "color",
-      "id": "text_background",
-      "label": "Text background",
-      "default": "rgba(0,0,0,0)"
     },
     {
       "type": "color",

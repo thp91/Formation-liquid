@@ -140,12 +140,33 @@
         "button_text_color": "rgba(0,0,0,0)"
       }
     },
+    "c65aa964-2ff9-462f-9823-4109e82b5d14": {
+      "type": "image-with-text-block",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify:\/\/shop_images\/fond_noir.png",
+        "mobile_image": "shopify:\/\/shop_images\/mob.png",
+        "subheading": "INLISSA, véritable apothicaire visionnaire composant avec minutie un véritable bouquet d’ingrédients naturels et bienfaisants, à l’e\u000fcacité manifeste.",
+        "title": "Un savant concentré naturel d’efficacité.",
+        "content": "<ul>\n<li>Solutions naturelles<\/li>\n<li>Haute concentration<\/li>\n<li>Fabrication française<\/li>\n<\/ul>",
+        "button_text": "DÉCOUVRIR LA MARQUE",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_position": "left",
+        "text_alignment": "left",
+        "text_background": "#282828",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#282828"
+      }
+    },
     "a8eb31ae-b207-40e6-8784-9b6f5cc8060d": {
       "type": "image-with-text-overlay",
       "settings": {
         "reveal_on_scroll": true,
         "section_height": "auto",
         "image": "shopify:\/\/shop_images\/fond_noir.png",
+        "mobile_image": "shopify:\/\/shop_images\/mob.png",
         "subheading": "",
         "title": "Un savant concentré naturel d’efficacité.",
         "content": "<p>INLISSA, véritable apothicaire visionnaire composant avec minutie un véritable bouquet d’ingrédients naturels et bienfaisants, à l’e\u000fcacité manifeste.<\/p>",
@@ -523,6 +544,7 @@
     "3e8f72d6-388c-4f3f-8f19-b58a86ead805",
     "87c4793c-8f36-41f2-b030-f80a62f559a2",
     "ed86301a-495c-4ef6-9b12-9537328146bf",
+    "c65aa964-2ff9-462f-9823-4109e82b5d14",
     "a8eb31ae-b207-40e6-8784-9b6f5cc8060d",
     "image-with-text",
     "shop-the-look",

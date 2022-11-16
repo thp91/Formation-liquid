@@ -77,6 +77,14 @@
 }
 
 
+/* Image with text overlay */
+
+.image-overlay__text-container ul li{
+  list-style-type: "\29EB";
+}
+
+
+
 /* ------------ END CUSTOM CSS ------------ */
 
 

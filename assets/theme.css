@@ -98,7 +98,7 @@ button--transparent{
   margin-bottom: 10px !important;
 }
 
-@media screen and (min-width: 740px){
+@media screen and (min-width: 999px){
   .product-item__quick-form{
     background-color: #fff;
     padding: 20px 0;
@@ -134,9 +134,16 @@ button--transparent{
   font-weight: 700;
 }
 
+.image-with-text-block__text-container .button-wrapper{
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 999px){
 .custom-bg{
   background-color: var(--custom-bgc) !important;
+}
+.image-with-text-block__image-wrapper{
+  text-align: center;
 }
 }
 

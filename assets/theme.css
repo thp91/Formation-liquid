@@ -11207,7 +11207,7 @@ input:checked + .popover__choice-label::after,
   }
 
   .multi-column--small {
-    --section-items-per-row: 7;
+    --section-items-per-row: 6;
   }
 
   .multi-column--medium {

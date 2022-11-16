@@ -145,7 +145,14 @@
   margin-top: 30px;
 }
 
-
+@media screen and (max-width: 740px){
+  .footer__item.footer__item--newsletter {
+      grid-row-start: 1;
+  }
+  .footer{
+    padding: 48px 0;
+  }
+}
 
 /* ------------ END CUSTOM CSS ------------ */
 
@@ -9123,7 +9130,7 @@ input:checked + .popover__choice-label::after,
   }
 }
 .footer {
-  padding: 48px 0;
+  /* padding: 48px 0; */
   background: rgb(var(--background));
   color: rgb(var(--text-color));
 }
@@ -9241,7 +9248,7 @@ input:checked + .popover__choice-label::after,
 @media screen and (min-width: 1000px) {
   .footer {
     padding-top: 72px;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
   }
 
   .footer__item-list {

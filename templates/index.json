@@ -359,8 +359,8 @@
         "testimonial-1": {
           "type": "testimonial",
           "settings": {
-            "content": "Write some content about what they are saying about your store.",
-            "author": "John S."
+            "content": "Des résultats incroyables sur ma peau : naturellement hydratée et glowy, on me dit que j’ai bonne mine !",
+            "author": "SARAH"
           }
         },
         "3561531e-7980-4383-b5a5-8c8fdd1126bd": {
@@ -381,7 +381,7 @@
         "title": "",
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)",
-        "item_color": "rgba(0,0,0,0)"
+        "item_color": "#eaddd6"
       }
     },
     "26e3e7bb-6bab-4567-a639-01447d372873": {

@@ -54,13 +54,13 @@
                   <p class="footer__item-title heading heading--small">{{ block.settings.title | escape }}</p>
                 {%- endif -%}
 
-                <div class="footer__item-content">
+                {% comment %} <div class="footer__item-content">
                   {%- if block.settings.content != blank -%}
                     {{- block.settings.content -}}
                   {%- endif -%}
 
                   {%- render 'social-media' -%}
-                </div>
+                </div> {% endcomment %}
 
               {%- when 'newsletter' -%}
 
@@ -101,6 +101,7 @@
                     {%- endif -%}
                   {%- endform -%}
                 </div>
+                {%- render 'social-media' -%}
             {%- endcase -%}
           {%- endcapture -%}
 
@@ -196,9 +197,6 @@
             {%- endif -%}
           {%- endform -%}
         {%- endif -%}
-
-        <span class="footer__copyright text--xsmall text--subdued">{{ shop.name }} <span class="square-separator square-separator--block square-separator--subdued"></span> {{ powered_by_link | replace: '<a', '<a class="link--faded"' }}</span>
-
         {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
           <div class="footer__payment-methods">
             <span class="footer__payment-methods-label text--xsmall text--subdued">{{ 'footer.general.we_accept' | t }}</span>

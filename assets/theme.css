@@ -141,6 +141,10 @@
   margin-top: 10px;
 }
 
+.footer__item--newsletter ul{
+  margin-top: 30px;
+}
+
 
 
 /* ------------ END CUSTOM CSS ------------ */
@@ -2905,7 +2909,7 @@ p + .button-group,
 
 .social-media__item {
   position: relative;
-  box-shadow: 1px 0 0 0 rgb(var(--border-color)),0 1px 0 0 rgb(var(--border-color)),1px 1px 0 0 rgb(var(--border-color)),1px 0 0 0 rgb(var(--border-color)) inset,0 1px 0 0 rgb(var(--border-color)) inset;
+  /* box-shadow: 1px 0 0 0 rgb(var(--border-color)),0 1px 0 0 rgb(var(--border-color)),1px 1px 0 0 rgb(var(--border-color)),1px 0 0 0 rgb(var(--border-color)) inset,0 1px 0 0 rgb(var(--border-color)) inset; */
   transform: translateZ(0); /* allow to promote on its own layer */
 }
 
@@ -2980,8 +2984,8 @@ p + .button-group,
 
 @media screen and (min-width: 741px) {
   .social-media__link {
-    height: 55px;
-    width: 55px;
+    height: 30px;
+    width: 30px;
   }
 }
 

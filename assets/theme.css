@@ -218,6 +218,12 @@ button--transparent{
   }
 }
 
+/* Text with icons */
+
+.text-with-icons__content-wrapper p:nth-child(1){
+  font-weight: 500;
+}
+
 /* ------------ END CUSTOM CSS ------------ */
 
 

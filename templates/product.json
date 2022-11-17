@@ -26,12 +26,18 @@
             "buy_now_button_background": "rgba(0,0,0,0)",
             "buy_now_button_text_color": "rgba(0,0,0,0)"
           }
+        },
+        "1f046b64-4c80-4d43-9e82-99fcd1ee1ac4": {
+          "type": "more_info",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "variant_picker",
         "a027f92b-03ff-4646-b084-8d0b2c9e1454",
-        "buy_buttons"
+        "buy_buttons",
+        "1f046b64-4c80-4d43-9e82-99fcd1ee1ac4"
       ],
       "settings": {
         "show_vendor": false,
@@ -76,11 +82,64 @@
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
+    },
+    "da421601-d2eb-4460-8e09-9bc090e08b54": {
+      "type": "faq",
+      "blocks": {
+        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-0": {
+          "type": "category",
+          "settings": {
+            "title": "Shipping"
+          }
+        },
+        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-1": {
+          "type": "question",
+          "settings": {
+            "title": "Do you ship overseas?",
+            "answer": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.<\/p>"
+          }
+        },
+        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-2": {
+          "type": "question",
+          "settings": {
+            "title": "How long will it take to get my order?",
+            "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<\/p>"
+          }
+        },
+        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-3": {
+          "type": "category",
+          "settings": {
+            "title": "Other"
+          }
+        },
+        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-4": {
+          "type": "question",
+          "settings": {
+            "title": "Any question?",
+            "answer": "<p>You can contact us through our contact page! We will be happy to assist you.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-0",
+        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-1",
+        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-2",
+        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-3",
+        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-4"
+      ],
+      "settings": {
+        "show_navigation": false,
+        "title": "FAQ",
+        "content": "",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
     }
   },
   "order": [
     "main",
     "product-content",
-    "product-recommendations"
+    "product-recommendations",
+    "da421601-d2eb-4460-8e09-9bc090e08b54"
   ]
 }

@@ -247,11 +247,6 @@
                       {{- 'general.onboarding.product_description' | t -}}
                     </div>
 
-                    {% when 'more_info' %}
-                      <div class="product-form__more-info">
-                        {{ product.metafields.custom.plus_product }}
-                      </div>
-
                   {%- when 'inventory' -%}
                     <product-inventory class="product-form__inventory-wrapper" {{ block.shopify_attributes }}>
                       <span class="inventory inventory--high">{{ 'product.form.in_stock' | t }}</span>
@@ -387,11 +382,6 @@
     {
       "type": "description",
       "name": "Description",
-      "limit": 1
-    },
-    {
-      "type": "more_info",
-      "name": "More info",
       "limit": 1
     },
     {

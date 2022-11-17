@@ -228,6 +228,34 @@ button--transparent{
   font-weight: 500;
 }
 
+/* Main product > product form */
+
+.product-form__more-info{
+  background-color: #F0EAE6;
+  padding: 20px;
+}
+
+.product-form__more-info-title{
+  margin-bottom: 10px;
+}
+
+.product-form__more-info-title p{
+  margin: 0;
+  font-weight: 500;
+}
+
+.product-form__buy-buttons{
+  margin-bottom: 30px;
+}
+
+.product-form__description ul li{
+  list-style-type: "\29EB";
+  padding-left: 15px !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+
 /* ------------ END CUSTOM CSS ------------ */
 
 
@@ -12216,7 +12244,6 @@ input:checked + .popover__choice-label::after,
 
 .product-meta {
   display: block;
-  margin: 24px 0;
   padding-bottom: 16px;
   border-bottom: 1px solid rgb(var(--border-color));
 }
@@ -12318,11 +12345,7 @@ input:checked + .popover__choice-label::after,
  * PRODUCT FORM
  */
 
-.product-form {
-  display: grid;
-  grid-row-gap: 16px;
-  row-gap: 16px;
-}
+
 
 .product-form__variants {
   display: block;

@@ -281,6 +281,24 @@
           </div>
         {%- endif -%}
 
+        {%- comment -%}
+      ----------------------------------------------------------------------------------------------------------------
+      PRODUCT MORE INFO
+      ----------------------------------------------------------------------------------------------------------------
+      {%- endcomment -%}
+
+      {%- when 'more_info' -%}
+        {%- if product.metafields.custom.plus_product != blank -%}
+        <div class="product-form__more-info">
+          <div class=" heading h6 product-form__more-info-title">
+            <p>Le + produit</p>
+          </div>
+          <div class="product-form__more-info-content">
+            {{- product.metafields.custom.plus_product -}}
+          </div>
+        </div>
+      {% endif %}
+
       {%- comment -%}
       ----------------------------------------------------------------------------------------------------------------
       PRODUCT DESCRIPTION

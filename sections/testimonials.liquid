@@ -20,8 +20,15 @@
       {%- assign text_color = section.settings.text_color -%}
     {%- endif -%}
 
+    {%- if section.settings.item_color == 'rgba(0,0,0,0)' -%}
+      {%- assign item_color = settings.item_color -%}
+    {%- else -%}
+      {%- assign item_color = section.settings.item_color -%}
+    {%- endif -%}
+
     --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
     --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
+    --item-color: {{ item_color.red }}, {{ item_color.green }}, {{ item_color.blue }};
     --prev-next-button-background: {{ section_background.red }}, {{ section_background.green }}, {{ section_background.blue }};
     --prev-next-button-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
 
@@ -141,6 +148,12 @@
       "id": "text_color",
       "label": "Color",
       "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "item_color",
+      "label": "Color Item",
+      "default": "rgba(0,0,0,0)"
     }
   ],
   "presets": [
@@ -157,7 +170,8 @@
           "type": "testimonial"
         }
       ],
-      "settings": {}
+      "settings": {
+      }
     }
   ]
 }

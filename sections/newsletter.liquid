@@ -53,9 +53,9 @@
     <div class="container container--flush">
       {%- assign text_position = section.settings.text_position | split: '_' | last -%}
 
-      <div {% if section.settings.reveal_on_scroll %}reveal{% endif %} class="image-with-text-block__content image-with-text-block__content--tight content-box content-box--small content-box--text-{{ section.settings.text_alignment}} content-box--{{ text_position }} text-container">
-        {%- if section.settings.subheading != blank -%}
-          <h2 class="heading heading--small">{{ section.settings.subheading | escape }}</h2>
+      <div {% if section.settings.reveal_on_scroll %}reveal{% endif %} class="image-with-text-block__content image-with-text-block__content--tight content-box content-box--small content-box--text-{{ section.settings.text_alignment }} content-box--{{ text_position }} text-container">
+        {%- if section.settings.title != blank -%}
+          <h2 class="heading h4">{{ section.settings.title | escape }}</h2>
         {%- endif -%}
 
         {%- if section.settings.content != blank -%}
@@ -91,7 +91,7 @@
             <input type="hidden" name="contact[tags]" value="newsletter">
             <input type="hidden" name="contact[context]" value="{{ newsletter_id }}">
 
-            <div class="input-row">
+            {% comment %} <div class="input-row">
               <div class="input">
                 <input type="email" id="newsletter[{{ section.id }}][contact][email]" name="contact[email]" class="input__field" required>
                 <label for="newsletter[{{ section.id }}][contact][email]" class="input__label">{{ 'general.newsletter.email' | t }}</label>
@@ -100,9 +100,21 @@
               <div class="input">
                 <button type="submit" is="loader-button" class="button button--primary">{{ 'general.newsletter.subscribe' | t }}</button>
               </div>
+            </div> {% endcomment %}
+
+            <div class="input" style="background-color:{{ section.settings.input_background_color }}; color:{{ section.settings.input_text_color }};">
+              <input type="email" id="newsletter[{{ section.id }}][contact][email]" name="contact[email]" class="input__field" required>
+              <label for="newsletter[{{ section.id }}][contact][email]" class="input__label" style="background-color:{{ section.settings.input_background_color }}; color:{{ section.settings.input_text_color }}">{{ 'general.newsletter.email' | t }}</label>
+              <button type="submit" is="loader-button" class="input__submit-icon tap-area" title="{{ 'footer.newsletter.submit' | t }}" style="color:{{ section.settings.input_text_color }};">{% render 'icon' with 'nav-arrow-right', direction_aware: true %}</button>
             </div>
+
           {%- endif -%}
         {%- endform -%}
+
+        {%- if section.settings.subheading != blank -%}
+          <h2 class="heading heading--small">{{ section.settings.subheading | escape }}</h2>
+        {%- endif -%}
+ 
       </div>
     </div>
   </image-with-text-block>
@@ -129,6 +141,12 @@
       "id": "image",
       "label": "Image",
       "info": "2000 x 980px .jpg recommended"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
     },
     {
       "type": "text",
@@ -209,7 +227,20 @@
       "id": "button_text_color",
       "label": "Button text",
       "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "input_background_color",
+      "label": "Input Button background",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "input_text_color",
+      "label": "Input Button text",
+      "default": "rgba(0,0,0,0)"
     }
+
   ],
   "presets": [
     {

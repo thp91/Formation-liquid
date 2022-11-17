@@ -1,0 +1,32 @@
+<div class="logo-with-text container">
+    <div class="logo-with-text_image">
+        <img src="{{ section.settings.image | img_url: "medium" }}">
+    </div>
+    <div class="logo-with-text_title h4">
+        <h4>{{ section.settings.title }}</h4>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Logo with text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Votre logo /image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Your title",
+      "default": "Your title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo with image"
+    }
+  ]
+}
+{% endschema%}

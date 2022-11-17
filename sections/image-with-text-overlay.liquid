@@ -91,6 +91,10 @@
                   {{- section.settings.content -}}
                 {%- endif -%}
 
+                {%- if section.settings.list != blank -%}
+                  {{- section.settings.list -}}
+                {%- endif -%}
+
                 {%- if section.settings.button_text != blank -%}
                   {%- if section.settings.link_style == 'link' -%}
                     <a href="{{ section.settings.button_link }}" class="multi-column__link heading heading--small link">{{ section.settings.button_text | escape }}</a>
@@ -173,6 +177,11 @@
       "id": "content",
       "label": "Content",
       "default": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.</p>"
+    },
+    {
+      "type": "textarea",
+      "id": "list",
+      "label": "List" 
     },
     {
       "type": "text",

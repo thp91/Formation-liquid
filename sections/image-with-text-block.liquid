@@ -4,19 +4,8 @@
   {%- assign is_boxed = false -%}
 {%- endif -%}
 
-{%- if section.settings.text_background != settings.background and section.settings.text_background != 'rgba(0,0,0,0)' -%}
-  {%- assign blends_with_background = false -%}
-{%- else -%}
-  {%- assign blends_with_background = true -%}
-{%- endif -%}
-
 <style>
   #shopify-section-{{ section.id }} {
-    {%- if section.settings.text_background == 'rgba(0,0,0,0)' -%}
-      {%- assign section_block_background = settings.background -%}
-    {%- else -%}
-      {%- assign section_block_background = section.settings.text_background -%}
-    {%- endif -%}
 
     {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
       {%- assign heading_color = settings.heading_color -%}
@@ -42,6 +31,8 @@
     --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
     --primary-button-background: {{ button_background.red }}, {{ button_background.green }}, {{ button_background.blue }};
     --primary-button-text-color: {{ button_text_color.red }}, {{ button_text_color.green }}, {{ button_text_color.blue }};
+
+    --custom-bgc: {{ section.settings.background_color }};
 
     --prev-next-button-background: {{ settings.background.red }}, {{ settings.background.green }}, {{ settings.background.blue }};
     --prev-next-button-color: {{ settings.text_color.red }}, {{ settings.text_color.green }}, {{ settings.text_color.blue }};
@@ -71,7 +62,7 @@
 <section class="section {% unless is_boxed or section.settings.text_position contains 'overlap' %}section--flush{% endunless %}">
   <div {% if is_boxed %}class="container"{% endif %}>
     <image-with-text-block {% if section.settings.reveal_on_scroll %}reveal-on-scroll{% endif %} class="image-with-text-block {% if section.settings.text_position contains 'overlap' %}image-with-text-block--overlap-{{ section.settings.text_position | split: '_' | last }}{% endif %}">
-      <div class="image-with-text-block__image-wrapper">
+      <div class="image-with-text-block__image-wrapper {% unless section.settings.background_color == "rgba(0,0,0,0)" %}custom-bg{% endunless %}">
         {%- if section.settings.image != blank -%}
           <img class="image-with-text-block__image {% if section.settings.mobile_image != blank %}hidden-pocket{% endif %}" {% if section.settings.reveal_on_scroll %}reveal{% endif %} loading="lazy" sizes="(max-width: 999px) 100vw, {% if section.settings.text_position contains 'overlap' %}72vw{% elsif section.settings.background_type == 'boxed' %}min(1520px, 100vw){% else %}100vw{% endif %}" {% render 'image-attributes', image: section.settings.image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' %}>
 
@@ -87,22 +78,23 @@
             {{- 'lifestyle-1' | placeholder_svg_tag: image_classes -}}
           {%- endif -%}
         {%- endif -%}
-      </div>
+      </div> 
 
       {%- capture section_content -%}
         {%- assign text_position = section.settings.text_position | split: '_' | last -%}
 
-        <div {% if section.settings.reveal_on_scroll %}reveal{% endif %} class="image-with-text-block__content content-box content-box--small content-box--text-{{ section.settings.text_alignment}} content-box--{{ text_position }} text-container">
-          {%- if section.settings.subheading != blank -%}
-            <h2 class="heading heading--small">
-              <split-lines {% if section.settings.reveal_on_scroll %}reveal{% endif %}>{{ section.settings.subheading | escape }}</split-lines>
-            </h2>
-          {%- endif -%}
+        <div {% if section.settings.reveal_on_scroll %}reveal{% endif %} class="image-with-text-block__content content-box content-box--small content-box--text-{{ section.settings.text_alignment}} content-box--{{ text_position }} text-container {% unless section.settings.background_color == "rgba(0,0,0,0)" %}custom-bg{% endunless %}">
 
           {%- if section.settings.title != blank -%}
-            <h3 class="heading h3">
+            <h3 class="heading h2">
               <split-lines {% if section.settings.reveal_on_scroll %}reveal{% endif %}>{{ section.settings.title | escape }}</split-lines>
             </h3>
+          {%- endif -%}
+
+          {%- if section.settings.subheading != blank -%}
+            <p>
+              <split-lines {% if section.settings.reveal_on_scroll %}reveal{% endif %}>{{ section.settings.subheading | escape }}</split-lines>
+            </p>
           {%- endif -%}
 
           <div class="image-with-text-block__text-container" {% if section.settings.reveal_on_scroll %}reveal{% endif %}>
@@ -112,7 +104,7 @@
 
             {%- if section.settings.button_text != blank -%}
               <div class="button-wrapper">
-                <a href="{{ section.settings.button_link }}" class="button button--primary">{{ section.settings.button_text | escape }}</a>
+                <a href="{{ section.settings.button_link }}" class="button {% if section.settings.button_background == "rgba(0,0,0,0)" %}button--transparent{% else %}button--primary{% endif %}" style="border: 1px solid {{ section.settings.button_border }};">{{ section.settings.button_text | escape }}</a>
               </div>
             {%- endif -%}
           </div>
@@ -167,10 +159,9 @@
       "default": "Image with text block"
     },
     {
-      "type": "richtext",
+      "type": "textarea",
       "id": "content",
-      "label": "Content",
-      "default": "<p>Use block text to give your customers insight into your brand. Select impactful text that relates to your brand and story.</p>"
+      "label": "Content"
     },
     {
       "type": "text",
@@ -252,12 +243,6 @@
     },
     {
       "type": "color",
-      "id": "text_background",
-      "label": "Text background",
-      "default": "rgba(0,0,0,0)"
-    },
-    {
-      "type": "color",
       "id": "text_color",
       "label": "Text color",
       "default": "rgba(0,0,0,0)"
@@ -266,6 +251,18 @@
       "type": "color",
       "id": "button_background",
       "label": "Button background",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "button_border",
+      "label": "Button Border",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
       "default": "rgba(0,0,0,0)"
     },
     {

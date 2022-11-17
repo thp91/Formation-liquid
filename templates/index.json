@@ -6,149 +6,371 @@
         "slide-1": {
           "type": "image",
           "settings": {
-            "title": "Slide 1"
-          }
-        },
-        "slide-2": {
-          "type": "image",
-          "settings": {
-            "title": "Slide 2"
+            "image": "shopify:\/\/shop_images\/Group_3220.png",
+            "mobile_image": "shopify:\/\/shop_images\/image_110.png",
+            "block_position": "middle_right",
+            "text_alignment": "left",
+            "subheading": "Anti-âge Premium contient des composés antioxydants et anti-inflammatoires qui aident à régénérer, protéger et apaiser les peaux matures.",
+            "title": "Le nouvel elixir d’avenir au service de votre beauté.",
+            "button_1_text": "JE REPULPE MA PEAU",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#282828",
+            "button_background": "rgba(0,0,0,0)",
+            "button_border": "#000000",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
           }
         }
       },
       "block_order": [
-        "slide-1",
-        "slide-2"
+        "slide-1"
       ],
       "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
       }
     },
-    "featured-collections": {
+    "3e8f72d6-388c-4f3f-8f19-b58a86ead805": {
+      "type": "logo-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_2977_bd97d382-6708-4235-96b5-d25975aa57da.png",
+        "title": "INLISSA, l’alchimiste moderne qui libère votre potentiel."
+      }
+    },
+    "87c4793c-8f36-41f2-b030-f80a62f559a2": {
+      "type": "multi-column",
+      "blocks": {
+        "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_88_5bec77c5-966f-490b-8047-f65fb1ebb648.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Beauté",
+            "content": "",
+            "link_text": "DÉCOUVRIR",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_79_1.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Santé",
+            "content": "",
+            "link_text": "DÉCOUVRIR",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_84_1.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Offres",
+            "content": "",
+            "link_text": "DÉCOUVRIR",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "09a7ae64-1526-40f2-8449-584d93a366f9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_84_2.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Actifs & savoirs",
+            "content": "",
+            "link_text": "DÉCOUVRIR",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-0",
+        "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-1",
+        "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-2",
+        "09a7ae64-1526-40f2-8449-584d93a366f9"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": true,
+        "text_on_image": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "large",
+        "spacing": "tight",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "ed86301a-495c-4ef6-9b12-9537328146bf": {
       "type": "featured-collections",
       "blocks": {
-        "collection-1": {
+        "template--16617426813159__ed86301a-495c-4ef6-9b12-9537328146bf-166852873337e4ab53-0": {
           "type": "collection",
           "settings": {
+            "collection": "beaute",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
           }
         }
       },
       "block_order": [
-        "collection-1"
+        "template--16617426813159__ed86301a-495c-4ef6-9b12-9537328146bf-166852873337e4ab53-0"
       ],
       "settings": {
+        "subheading": "",
+        "title": "Prenez soin de vous avec nos nouveautés",
+        "header_text_alignment": "left",
+        "content": "",
+        "products_count": 4,
+        "products_per_row": 4,
+        "stack_products": true,
+        "text_alignment": "left",
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
-      "blocks": {
-        "item-1": {
-          "type": "item",
-          "settings": {
-            "tab_label": "Text 1"
-          }
-        },
-        "item-2": {
-          "type": "item",
-          "settings": {
-            "tab_label": "Text 2"
-          }
-        }
-      },
-      "block_order": [
-        "item-1",
-        "item-2"
-      ],
-      "settings": {
-      }
-    },
-    "shop-the-look": {
-      "type": "shop-the-look",
-      "blocks": {
-        "look-1": {
-          "type": "look",
-          "settings": {
-            "dot_type": "inverted",
-            "product_1_horizontal_position": 41,
-            "product_1_vertical_position": 41,
-            "product_2_horizontal_position": 46,
-            "product_2_vertical_position": 64,
-            "product_3_horizontal_position": 62,
-            "product_3_vertical_position": 50
-          }
-        }
-      },
-      "block_order": [
-        "look-1"
-      ],
-      "settings": {
-      }
-    },
-    "blog-posts": {
-      "type": "blog-posts",
-      "settings": {
-      }
-    },
-    "image-with-text-block": {
+    "c65aa964-2ff9-462f-9823-4109e82b5d14": {
       "type": "image-with-text-block",
       "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify:\/\/shop_images\/fond_noir.png",
+        "mobile_image": "shopify:\/\/shop_images\/mob.png",
+        "subheading": "INLISSA, véritable apothicaire visionnaire composant avec minutie un véritable bouquet d’ingrédients naturels et bienfaisants, à l’e\u000fcacité manifeste.",
+        "title": "Un savant concentré naturel d’efficacité.",
+        "content": "<ul>\n<li>Solutions naturelles<\/li>\n<li>Haute concentration<\/li>\n<li>Fabrication française<\/li>\n<\/ul>",
+        "button_text": "DÉCOUVRIR LA MARQUE",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_position": "left",
+        "text_alignment": "left",
+        "text_color": "#ffffff",
+        "button_background": "#131313",
+        "button_border": "#faf8f7",
+        "background_color": "#131313",
+        "button_text_color": "#faf8f7"
       }
     },
-    "collection-list": {
-      "type": "collection-list",
+    "9f5154a7-0c14-45bf-a733-4ee5396261d0": {
+      "type": "featured-collections",
       "blocks": {
-        "collection-1": {
+        "template--16617426813159__9f5154a7-0c14-45bf-a733-4ee5396261d0-1668595953bee75b3e-0": {
           "type": "collection",
           "settings": {
-          }
-        },
-        "collection-2": {
-          "type": "collection",
-          "settings": {
-          }
-        },
-        "collection-3": {
-          "type": "collection",
-          "settings": {
+            "collection": "beaute",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
           }
         }
       },
       "block_order": [
-        "collection-1",
-        "collection-2",
-        "collection-3"
+        "template--16617426813159__9f5154a7-0c14-45bf-a733-4ee5396261d0-1668595953bee75b3e-0"
       ],
       "settings": {
-        "layout": "collage"
+        "subheading": "",
+        "title": "Vos indispensables soin beauté",
+        "header_text_alignment": "left",
+        "content": "",
+        "products_count": 3,
+        "products_per_row": 3,
+        "stack_products": true,
+        "text_alignment": "left",
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
       }
     },
-    "timeline": {
-      "type": "timeline",
+    "d2d8b79a-3e93-4b84-a01f-60209609cba5": {
+      "type": "image-with-text-block",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify:\/\/shop_images\/Group_3222.png",
+        "mobile_image": "shopify:\/\/shop_images\/Group_3202_rogn.png",
+        "subheading": "Profitez d’une remise de 30% pour l’achat d’un pack duo !",
+        "title": "Composez votre pack sur mesure",
+        "content": "",
+        "button_text": "JE COMPOSE MON PACK",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_position": "right",
+        "text_alignment": "left",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_border": "#282828",
+        "background_color": "#f0eae6",
+        "button_text_color": "#000000"
+      }
+    },
+    "45971290-3f22-4524-b77f-f4904f7c75db": {
+      "type": "featured-collections",
       "blocks": {
-        "item-1": {
-          "type": "item",
+        "template--16617426813159__45971290-3f22-4524-b77f-f4904f7c75db-16685962410a117c03-0": {
+          "type": "collection",
           "settings": {
-            "label": "2000"
-          }
-        },
-        "item-2": {
-          "type": "item",
-          "settings": {
-            "label": "2010"
-          }
-        },
-        "item-3": {
-          "type": "item",
-          "settings": {
-            "label": "2020"
+            "collection": "beaute",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
           }
         }
       },
       "block_order": [
-        "item-1",
-        "item-2",
-        "item-3"
+        "template--16617426813159__45971290-3f22-4524-b77f-f4904f7c75db-16685962410a117c03-0"
       ],
       "settings": {
+        "subheading": "",
+        "title": "Une santé de fer",
+        "header_text_alignment": "left",
+        "content": "",
+        "products_count": 3,
+        "products_per_row": 3,
+        "stack_products": true,
+        "text_alignment": "left",
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "a72678d4-db65-482e-b7b0-1e6a6a23a35e": {
+      "type": "multi-column",
+      "blocks": {
+        "template--16617426813159__a72678d4-db65-482e-b7b0-1e6a6a23a35e-1668596275bb443037-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Cheveux",
+            "content": "",
+            "link_text": "DÉCOUVRIR",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--16617426813159__a72678d4-db65-482e-b7b0-1e6a6a23a35e-1668596275bb443037-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_ee73d66d-ae7b-45f6-bbf5-673d88b3eb9e.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Peau",
+            "content": "",
+            "link_text": "DÉCOUVRIR",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--16617426813159__a72678d4-db65-482e-b7b0-1e6a6a23a35e-1668596275bb443037-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img-1.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Calme & Sérénité",
+            "content": "",
+            "link_text": "DÉCOUVRIR",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--16617426813159__a72678d4-db65-482e-b7b0-1e6a6a23a35e-1668596275bb443037-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img-2.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Immunité",
+            "content": "",
+            "link_text": "DÉCOUVRIR",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "82b44b82-1736-46cd-bc4d-bdd410438e69": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img-3.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Tonus  & Vitalité",
+            "content": "",
+            "link_text": "DÉCOUVRIR",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "dea8c243-376d-4d37-9326-bbbeb01ad456": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img-4.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Détox",
+            "content": "",
+            "link_text": "DÉCOUVRIR",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--16617426813159__a72678d4-db65-482e-b7b0-1e6a6a23a35e-1668596275bb443037-0",
+        "template--16617426813159__a72678d4-db65-482e-b7b0-1e6a6a23a35e-1668596275bb443037-1",
+        "template--16617426813159__a72678d4-db65-482e-b7b0-1e6a6a23a35e-1668596275bb443037-2",
+        "template--16617426813159__a72678d4-db65-482e-b7b0-1e6a6a23a35e-1668596275bb443037-3",
+        "82b44b82-1736-46cd-bc4d-bdd410438e69",
+        "dea8c243-376d-4d37-9326-bbbeb01ad456"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": true,
+        "text_on_image": true,
+        "subheading": "",
+        "title": "Quel est votre besoin ?",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "small",
+        "spacing": "tight",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
       }
     },
     "testimonials": {
@@ -157,105 +379,143 @@
         "testimonial-1": {
           "type": "testimonial",
           "settings": {
+            "content": "Des résultats incroyables sur ma peau : naturellement hydratée et glowy, on me dit que j’ai bonne mine !",
+            "author": "SARAH"
+          }
+        },
+        "3561531e-7980-4383-b5a5-8c8fdd1126bd": {
+          "type": "testimonial",
+          "settings": {
+            "content": "Write some content about what they are saying about your store.",
+            "author": "John S."
           }
         }
       },
       "block_order": [
-        "testimonial-1"
+        "testimonial-1",
+        "3561531e-7980-4383-b5a5-8c8fdd1126bd"
       ],
       "settings": {
+        "reveal_on_scroll": true,
+        "subheading": "",
+        "title": "",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "item_color": "#eaddd6"
       }
     },
-    "featured-product": {
-      "type": "featured-product",
-      "blocks": {
-        "variant-picker": {
-          "type": "variant_picker",
-          "settings": {
-          }
-        },
-        "quantity-selector": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "buy-buttons": {
-          "type": "buy_buttons",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "variant-picker",
-        "quantity-selector",
-        "buy-buttons"
-      ],
+    "26e3e7bb-6bab-4567-a639-01447d372873": {
+      "type": "blog-posts",
       "settings": {
+        "blog": "science",
+        "subheading": "",
+        "title": "Pause lecture",
+        "articles_count": 4,
+        "stack_mobile": false,
+        "show_category": true,
+        "show_excerpt": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
       }
     },
-    "text-with-icons": {
+    "2c79ed7c-f796-4f51-88cb-5da4322969fd": {
+      "type": "newsletter",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify:\/\/shop_images\/Rectangle_862_e4f487cf-9d26-4128-ab8a-88131c1c7752.png",
+        "title": "Restons en contact",
+        "subheading": "Pour en savoir plus, consultez notre Politique de protection des données personnelles.",
+        "content": "<p>Profitez dès maintenant d'une remise de -10% sur votre prochaine commande en vous inscrivant à notre Newsletter !<\/p>",
+        "text_position": "right",
+        "text_alignment": "center",
+        "text_background": "#000000",
+        "text_color": "#ffffff",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "input_background_color": "#faf8f7",
+        "input_text_color": "#000000"
+      }
+    },
+    "5da158ea-74c3-400f-9979-6934aa37948c": {
       "type": "text-with-icons",
       "blocks": {
-        "item-1": {
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-0": {
           "type": "item",
           "settings": {
             "icon": "picto-box",
-            "title": "Free shipping",
-            "content": "<p>Free worldwide shipping and returns - customs and duties taxes included<\/p>"
+            "custom_icon": "shopify:\/\/shop_images\/Group_3162_e73a170c-cc4e-4122-9b76-41b3012027f7.png",
+            "custom_icon_width": 50,
+            "title": "LIVRAISON OFFERTE",
+            "content": "<p>À partir de 60€<\/p>"
           }
         },
-        "item-2": {
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-1": {
           "type": "item",
           "settings": {
             "icon": "picto-phone",
-            "title": "Customer service",
-            "content": "<p>We are available from monday to friday to answer your questions.<\/p>"
+            "custom_icon": "shopify:\/\/shop_images\/Frame.png",
+            "custom_icon_width": 50,
+            "title": "FORMULATIONS CLEAN",
+            "content": "<p>Des actifs naturels, pas d’ingrédients controversés, ni de ‘conservateurs, édulcorants, colorants’. <\/p>"
           }
         },
-        "item-3": {
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-2": {
           "type": "item",
           "settings": {
             "icon": "picto-lock",
-            "title": "Secure payment",
-            "content": "<p>Your payment information is processed securely.<\/p>"
+            "custom_icon": "shopify:\/\/shop_images\/Group_3202.png",
+            "custom_icon_width": 50,
+            "title": "ACTIFS BREVETÉS",
+            "content": "<p>Issus des dernières innovations scientifiques<\/p>"
           }
         },
-        "item-4": {
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-3": {
           "type": "item",
           "settings": {
             "icon": "picto-email",
-            "title": "Contact us",
-            "content": "<p>Need to contact us ? Just send us an e-mail at info@yourstore.com<\/p>"
+            "custom_icon": "shopify:\/\/shop_images\/Frame_1.png",
+            "custom_icon_width": 50,
+            "title": "BIODISPONIBILITÉS & DOSAGES OPTIMISÉS",
+            "content": "<p>L’efficacité avant tout<\/p>"
+          }
+        },
+        "cc0e2052-448e-448c-b19c-02e9c9b22dd6": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-customer-support",
+            "custom_icon": "shopify:\/\/shop_images\/Frame_2.png",
+            "custom_icon_width": 50,
+            "title": "MADE IN FRANCE",
+            "content": "<p>Une production 100% française<\/p>"
           }
         }
       },
       "block_order": [
-        "item-1",
-        "item-2",
-        "item-3",
-        "item-4"
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-0",
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-1",
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-2",
+        "template--16617426813159__5da158ea-74c3-400f-9979-6934aa37948c-16685974242f633f85-3",
+        "cc0e2052-448e-448c-b19c-02e9c9b22dd6"
       ],
       "settings": {
-      }
-    },
-    "newsletter": {
-      "type": "newsletter",
-      "settings": {
+        "background": "#f0eae6",
+        "text_color": "rgba(0,0,0,0)"
       }
     }
   },
   "order": [
     "slideshow",
-    "featured-collections",
-    "image-with-text",
-    "shop-the-look",
-    "blog-posts",
-    "image-with-text-block",
-    "collection-list",
+    "3e8f72d6-388c-4f3f-8f19-b58a86ead805",
+    "87c4793c-8f36-41f2-b030-f80a62f559a2",
+    "ed86301a-495c-4ef6-9b12-9537328146bf",
+    "c65aa964-2ff9-462f-9823-4109e82b5d14",
+    "9f5154a7-0c14-45bf-a733-4ee5396261d0",
+    "d2d8b79a-3e93-4b84-a01f-60209609cba5",
+    "45971290-3f22-4524-b77f-f4904f7c75db",
+    "a72678d4-db65-482e-b7b0-1e6a6a23a35e",
     "testimonials",
-    "timeline",
-    "featured-product",
-    "text-with-icons",
-    "newsletter"
+    "26e3e7bb-6bab-4567-a639-01447d372873",
+    "2c79ed7c-f796-4f51-88cb-5da4322969fd",
+    "5da158ea-74c3-400f-9979-6934aa37948c"
   ]
-}
+} 

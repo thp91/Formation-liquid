@@ -4,17 +4,20 @@
     "block_border_radius": "none",
     "heading_color": "#282828",
     "text_color": "#282828",
+    "background": "#faf8f7",
     "secondary_background": "#f5f5f5",
     "success_color": "#2e9e7b",
     "error_color": "#de2a2a",
-    "header_background": "#282828",
-    "footer_background": "#282828",
-    "footer_text_color": "#ffffff",
+    "header_background": "#ffffff",
+    "header_text_color": "#282828",
+    "footer_background": "#ffffff",
+    "footer_text_color": "#000000",
     "primary_button_background": "#405de6",
     "secondary_button_background": "#f3ff34",
     "secondary_button_text_color": "#282828",
     "product_on_sale_accent": "#de2a2a",
-    "product_custom_label_background": "#405de6",
+    "product_sold_out_accent": "#000000",
+    "product_custom_label_background": "#ffffff",
     "product_custom_label_2_background": "#f3ff34",
     "product_in_stock_text_color": "#2e9e7b",
     "product_low_stock_text_color": "#de2a2a",
@@ -33,6 +36,11 @@
     "product_image_size": "natural",
     "cart_type": "message",
     "cart_show_free_shipping_threshold": true,
+    "social_facebook": "#",
+    "social_twitter": "#",
+    "social_pinterest": "#",
+    "social_instagram": "#",
+    "social_linkedin": "#",
     "checkout_sidebar_background_color": "#f5f5f5",
     "checkout_accent_color": "#282828",
     "checkout_button_color": "#405de6",
@@ -41,16 +49,6 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
-        "blocks": {
-          "message-1": {
-            "type": "message",
-            "settings": {
-            }
-          }
-        },
-        "block_order": [
-          "message-1"
-        ],
         "settings": {
           "announcement_bar_position": "non_sticky",
           "announcement_text_size": "normal",
@@ -66,49 +64,96 @@
         "type": "header",
         "settings": {
           "enable_sticky_header": true,
+          "logo": "shopify:\/\/shop_images\/Group_2730_c3691a2e-8c9b-460c-b9d0-2369d41cb650.png",
+          "logo_max_width": 140,
+          "mobile_logo_max_width": 100,
           "navigation_menu": "main-menu",
-          "header_layout": "logo_left_navigation_center",
-          "show_icons": false,
+          "secondary_menu": true,
+          "navigation_menu_last": "main-menu2",
+          "sidebar_navigation_menu": "",
+          "header_layout": "logo_center_navigation_inline",
+          "show_icons": true,
           "reduce_desktop_padding": false,
+          "show_locale_selector": true,
+          "show_country_selector": false,
           "enable_transparent_header": false,
-          "transparent_header_text_color": "#ffffff"
+          "transparent_header_text_color": "#282828",
+          "transparent_logo": "shopify:\/\/shop_images\/Group_5.png",
+          "search_menu": ""
         }
       },
       "footer": {
         "type": "footer",
         "blocks": {
-          "text": {
-            "type": "text",
-            "settings": {
-            }
-          },
           "links": {
             "type": "links",
             "settings": {
               "menu": "footer"
             }
           },
+          "b85615ec-ece4-4000-8477-21ee883220e8": {
+            "type": "links",
+            "settings": {
+              "menu": "la-marque"
+            }
+          },
+          "c0b0e020-b814-4dac-b7d3-5d7dc63fad5b": {
+            "type": "links",
+            "settings": {
+              "menu": "contact"
+            }
+          },
           "newsletter": {
             "type": "newsletter",
             "settings": {
-            }
-          },
-          "social_media": {
-            "type": "social_media",
-            "settings": {
+              "logo": "shopify:\/\/shop_images\/Group_2730_c3691a2e-8c9b-460c-b9d0-2369d41cb650.png",
+              "title": "",
+              "content": "<p>Recevez des offres exclusives<br\/>et des conseils dans votre boîte mail<\/p>"
             }
           }
         },
         "block_order": [
-          "text",
           "links",
-          "newsletter",
-          "social_media"
+          "b85615ec-ece4-4000-8477-21ee883220e8",
+          "c0b0e020-b814-4dac-b7d3-5d7dc63fad5b",
+          "newsletter"
         ],
         "settings": {
+          "show_payment_icons": true,
+          "show_country_selector": true,
+          "show_locale_selector": true,
+          "show_cookie_bar": false,
+          "cookie_bar_title": "Cookie policy",
+          "cookie_bar_content": "<p>I agree to the processing of my data in accordance with the conditions set out in the policy of Privacy.<\/p>"
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "settings": {
+          "enable": false,
+          "apparition_delay": 5,
+          "show_only_on_index": true,
+          "show_only_for_visitors": true,
+          "show_only_once": true,
+          "image_position": "left",
+          "title": "Get 10% off",
+          "content": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>"
+        }
+      },
+      "mini-cart": {
+        "type": "mini-cart",
+        "settings": {
+          "show_order_note": true,
+          "show_checkout_button": true,
+          "empty_button_link": "shopify:\/\/collections\/all",
+          "show_recommendations": true,
+          "recommendations_title": "You may also like"
         }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Carbon": {

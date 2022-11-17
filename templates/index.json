@@ -87,12 +87,27 @@
             "text_alignment": "left",
             "vertical_alignment": "start"
           }
+        },
+        "09a7ae64-1526-40f2-8449-584d93a366f9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_84_2.png",
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Actifs & savoirs",
+            "content": "",
+            "link_text": "DÉCOUVRIR",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
         }
       },
       "block_order": [
         "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-0",
         "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-1",
-        "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-2"
+        "template--16617426813159__87c4793c-8f36-41f2-b030-f80a62f559a2-1668528756af78e6f1-2",
+        "09a7ae64-1526-40f2-8449-584d93a366f9"
       ],
       "settings": {
         "reveal_on_scroll": true,

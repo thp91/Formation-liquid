@@ -8,6 +8,10 @@
   font-family: 'Work Sans', sans-serif !important;
 }
 
+.price{
+  font-weight: 500;
+}
+
 /* Header */
 
 .header__secondary-menu{
@@ -134,7 +138,7 @@ button--transparent{
 
 @media screen and (min-width: 999px){
   .product-item__quick-form{
-    background-color: #fff;
+    background-color: rgb(var(--background));
     padding: 20px 0;
     z-index: 999;
   }
@@ -2842,7 +2846,7 @@ p + .button-group,
 }
 
 .price--highlight {
-  color: rgb(var(--product-on-sale-accent));
+  font-weight: 500;
 }
 
 .price--compare {

@@ -26,8 +26,11 @@
 
     <div class="product-meta__price-list-container" role="region" aria-live="polite">
       <div class="price-list" data-product-price-list>
+        {% for details in product.metafields.custom.product_info.value %}
+          {{ details | append: " | " }}
+        {% endfor %}
         {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
-          <span class="price price--highlight price--large">
+          <span class="price price--highlight">
             <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
 
             {%- if settings.currency_code_enabled -%}
@@ -83,7 +86,7 @@
             {%- capture savings -%}{{ product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | money }}{%- endcapture -%}
           {%- endif -%}
 
-          <span class="label label--highlight">{{ 'collection.product.discount_html' | t: savings: savings }}</span>
+          <span class="label">(-{{ savings }})</span>
         {%- endunless -%}
       </div>
     </div>

@@ -2819,6 +2819,7 @@ p + .button-group,
 
 [dir="ltr"] .price-list:not(.price-list--stack) > .price:not(:last-child) {
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 [dir="rtl"] .price-list:not(.price-list--stack) > .price:not(:last-child) {
@@ -12227,7 +12228,7 @@ input:checked + .popover__choice-label::after,
 }
 
 [dir="ltr"] .product-meta__label-list:not(:empty) {
-  margin-left: 16px;
+  margin-left: 10px;
 }
 
 [dir="rtl"] .product-meta__label-list:not(:empty) {

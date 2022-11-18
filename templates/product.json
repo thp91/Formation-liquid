@@ -31,13 +31,23 @@
           "type": "more_info",
           "settings": {
           }
+        },
+        "70e01cfe-abdf-4af7-b8f1-bbafac689efe": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title_1": "Efficacité & bienfaits",
+            "accordion_title_2": "Composition détaillée",
+            "accordion_title_3": "Conseils d’utilisation",
+            "accordion_title_4": "Science"
+          }
         }
       },
       "block_order": [
         "variant_picker",
         "a027f92b-03ff-4646-b084-8d0b2c9e1454",
         "buy_buttons",
-        "1f046b64-4c80-4d43-9e82-99fcd1ee1ac4"
+        "1f046b64-4c80-4d43-9e82-99fcd1ee1ac4",
+        "70e01cfe-abdf-4af7-b8f1-bbafac689efe"
       ],
       "settings": {
         "show_vendor": false,
@@ -86,50 +96,52 @@
     "da421601-d2eb-4460-8e09-9bc090e08b54": {
       "type": "faq",
       "blocks": {
-        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-0": {
-          "type": "category",
-          "settings": {
-            "title": "Shipping"
-          }
-        },
         "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-1": {
           "type": "question",
           "settings": {
-            "title": "Do you ship overseas?",
+            "title": "Peut-on faire plusieurs cures Inlissa en même temps ?",
             "answer": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.<\/p>"
           }
         },
         "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-2": {
           "type": "question",
           "settings": {
-            "title": "How long will it take to get my order?",
+            "title": "Il y a un dépôt au fond de mon ampoule, est-ce normal ?",
             "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<\/p>"
-          }
-        },
-        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-3": {
-          "type": "category",
-          "settings": {
-            "title": "Other"
           }
         },
         "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-4": {
           "type": "question",
           "settings": {
-            "title": "Any question?",
+            "title": "Les compléments alimentaires Inlissa sont-ils destinés uniquement aux femmes ?",
             "answer": "<p>You can contact us through our contact page! We will be happy to assist you.<\/p>"
+          }
+        },
+        "0c0b7a87-cd30-4f63-94de-dac9594dd971": {
+          "type": "question",
+          "settings": {
+            "title": "Peut-on faire plusieurs cures Inlissa en même temps ?",
+            "answer": "<p>Write content to help your customers to better understand your products or policies.<\/p>"
+          }
+        },
+        "8d2effb3-6d9e-403a-927d-4d3e53672fae": {
+          "type": "question",
+          "settings": {
+            "title": "Existe-t-il du collagène d’origine végétale ?",
+            "answer": "<p>Write content to help your customers to better understand your products or policies.<\/p>"
           }
         }
       },
       "block_order": [
-        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-0",
         "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-1",
         "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-2",
-        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-3",
-        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-4"
+        "template--16617427927271__da421601-d2eb-4460-8e09-9bc090e08b54-1668701321bbea6de7-4",
+        "0c0b7a87-cd30-4f63-94de-dac9594dd971",
+        "8d2effb3-6d9e-403a-927d-4d3e53672fae"
       ],
       "settings": {
         "show_navigation": false,
-        "title": "FAQ",
+        "title": "Nous vous répondons",
         "content": "",
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"

@@ -65,15 +65,73 @@
         "transition_effect": "slide"
       }
     },
-    "product-recommendations": {
-      "type": "product-recommendations",
+    "fe804fe5-c636-4492-862a-66f249fb9410": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-0": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Sans aucuns ingrédients controversés",
+            "content": ""
+          }
+        },
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Clean & Green",
+            "content": ""
+          }
+        },
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Aromes & colorants naturelles",
+            "content": ""
+          }
+        },
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Sans sucre ajouté, ni gluten, ni lactose",
+            "content": ""
+          }
+        },
+        "167ff7ae-0c3b-4c34-8d03-2ac0655f08f6": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Ingrédients d’origines naturelles",
+            "content": ""
+          }
+        },
+        "b7b1f290-4e4b-47fb-8848-0fb27b8389b6": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Sans conservateurs ni édulcorants",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-0",
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-1",
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-2",
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-3",
+        "167ff7ae-0c3b-4c34-8d03-2ac0655f08f6",
+        "b7b1f290-4e4b-47fb-8848-0fb27b8389b6"
+      ],
       "settings": {
-        "subheading": "",
-        "title": "You may also like",
-        "recommendations_count": 4,
-        "products": [
-
-        ],
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
@@ -81,12 +139,13 @@
     "16680989-27d2-4332-8c5b-374431086842": {
       "type": "faq-product",
       "settings": {
+        "title": "FAQ Product"
       }
     }
   },
   "order": [
     "main",
-    "product-recommendations",
+    "fe804fe5-c636-4492-862a-66f249fb9410",
     "16680989-27d2-4332-8c5b-374431086842"
   ]
 }

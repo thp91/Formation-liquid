@@ -1,0 +1,57 @@
+<section class="section {% if template.name == 'page' and template.suffix contains 'faq' %}section--tight{% endif %} {% unless blends_with_background %}section--flush{% endunless %}">
+    <div class="section__color-wrapper">
+      <div class="container">
+        <div class="{% unless blends_with_background %}vertical-breather{% endunless %}">
+          {%- if section.settings.title != blank or section.settings.content != blank -%}
+            <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %} text-container">
+              {%- if section.settings.title != blank -%}
+                <h1 class="heading h2">{{ section.settings.title | escape }}</h1>
+              {%- endif -%}
+            </header>
+          {%- endif -%}
+
+                <div class="faq">
+                    <div class="faq__wrapper" itemscope itemtype="https://schema.org/FAQPage">
+                    {% for item in (1..5) %}
+                        {% assign question = 'faq_question_' | append: forloop.index %}
+                        {% assign answer = 'faq_answer_' | append: forloop.index %}
+
+                            <div class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <button is="toggle-button" class="collapsible-toggle text--strong" aria-controls="block-{{ section.id }}-{{ block.id | append: forloop.index }}" aria-expanded="false" itemprop="name">
+                                {{- product.metafields.custom[question] -}}
+                                <span class="animated-plus"></span>
+                            </button>
+
+                            <collapsible-content id="block-{{ section.id }}-{{ block.id | append: forloop.index }}" class="collapsible anchor" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" {{ block.shopify_attributes }}>
+                                <div class="collapsible__content text-container" itemprop="text">
+                                {{ product.metafields.custom[answer] }}
+                                </div>
+                            </collapsible-content>
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Faq product",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "FAQ Product"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Faq Product"
+    }
+  ]
+}
+{% endschema %}

@@ -191,6 +191,38 @@
           {%- endcase -%}
         {%- endif -%}
 
+
+      {%- comment -%}
+      ----------------------------------------------------------------------------------------------------------------
+      ACCORDION
+      ----------------------------------------------------------------------------------------------------------------
+      {%- endcomment -%}
+
+      {% when 'accordion' %}
+
+        <div class="faq">
+
+          <div class="faq__wrapper" itemscope itemtype="https://schema.org/FAQPage">
+            {% for item in block.settings %}
+              {% assign title = 'accordion_title_' | append: forloop.index %}
+              {% assign content = 'accordion_text' | append: forloop.index %}
+                  <div class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button is="toggle-button" class="collapsible-toggle text--strong" aria-controls="block-{{ section.id }}-{{ block.id | append: forloop.index }}" aria-expanded="false" itemprop="name">
+                      {{- block.settings[title] -}}
+                      <span class="animated-plus"></span>
+                    </button>
+
+                    <collapsible-content id="block-{{ section.id }}-{{ block.id | append: forloop.index }}" class="collapsible anchor" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" {{ block.shopify_attributes }}>
+                      <div class="collapsible__content text-container" itemprop="text">
+                        {{ product.metafields.custom[content] }}
+                      </div>
+                    </collapsible-content>
+                  </div>
+
+                {% endfor %}
+          </div>
+        </div>
+
       {%- comment -%}
       ----------------------------------------------------------------------------------------------------------------
       TEXT

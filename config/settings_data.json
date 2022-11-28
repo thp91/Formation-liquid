@@ -158,36 +158,50 @@
             "type": "item",
             "settings": {
               "icon": "picto-box",
+              "custom_icon": "shopify:\/\/shop_images\/Group_3162_e73a170c-cc4e-4122-9b76-41b3012027f7.png",
               "custom_icon_width": 50,
-              "title": "Free shipping",
-              "content": "<p>Free worldwide shipping and returns - customs and duties taxes included<\/p>"
+              "title": "LIVRAISON OFFERTE",
+              "content": "<p>À partir de 60€<\/p>"
             }
           },
           "static-text-with-icons-1": {
             "type": "item",
             "settings": {
               "icon": "picto-phone",
+              "custom_icon": "shopify:\/\/shop_images\/Frame_10.png",
               "custom_icon_width": 50,
-              "title": "Customer service",
-              "content": "<p>We are available from monday to friday to answer your questions.<\/p>"
+              "title": "FORMULATIONS CLEAN",
+              "content": "<p>Des actifs naturels, pas d’ingrédients controversés, ni de ‘conservateurs, édulcorants, colorants’. <\/p>"
             }
           },
           "static-text-with-icons-2": {
             "type": "item",
             "settings": {
               "icon": "picto-lock",
+              "custom_icon": "shopify:\/\/shop_images\/Frame_11.png",
               "custom_icon_width": 50,
-              "title": "Secure payment",
-              "content": "<p>Your payment information is processed securely.<\/p>"
+              "title": "ACTIFS BREVETÉS",
+              "content": "<p>Issus des dernières innovations scientifiques<\/p>"
             }
           },
           "static-text-with-icons-3": {
             "type": "item",
             "settings": {
               "icon": "picto-email",
+              "custom_icon": "shopify:\/\/shop_images\/Frame_1.png",
               "custom_icon_width": 50,
-              "title": "Contact us",
-              "content": "<p>Need to contact us ? Just send us an e-mail at info@yourstore.com<\/p>"
+              "title": "BIODISPONIBILITÉS & DOSAGES OPTIMISÉS",
+              "content": "<p>L’efficacité avant tout<\/p>"
+            }
+          },
+          "3976b2b2-f162-451c-8d3d-943c8ab6ef88": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-customer-support",
+              "custom_icon": "shopify:\/\/shop_images\/Frame_13.png",
+              "custom_icon_width": 50,
+              "title": "MADE IN FRANCE",
+              "content": "<p>Une production<br\/>100% française<\/p>"
             }
           }
         },
@@ -195,11 +209,12 @@
           "static-text-with-icons-0",
           "static-text-with-icons-1",
           "static-text-with-icons-2",
-          "static-text-with-icons-3"
+          "static-text-with-icons-3",
+          "3976b2b2-f162-451c-8d3d-943c8ab6ef88"
         ],
         "settings": {
-          "show_section": false,
-          "background": "rgba(0,0,0,0)",
+          "show_section": true,
+          "background": "#f0eae6",
           "text_color": "rgba(0,0,0,0)"
         }
       },

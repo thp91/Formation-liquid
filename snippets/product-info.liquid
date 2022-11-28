@@ -1,6 +1,12 @@
 {%- capture product_form_id -%}product-form-{{ section.id }}-{{ product.id }}{%- endcapture -%}
 
 <div class="product__info">
+
+  {%- for tag in product.tags -%}
+    {%- if tag contains '__label' -%}
+      <span class="label label--custom{% if tag contains '__label2' %}2{% endif %}">{{ tag | remove: '__label' }}</span>
+    {%- endif -%}
+  {%- endfor -%}
   <!-- PRODUCT META -->
   <product-meta form-id="{{ product_form_id }}" price-class="price--large" class="product-meta">
     {%- if section.settings.show_vendor -%}

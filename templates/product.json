@@ -138,10 +138,13 @@
         "text_color": "rgba(0,0,0,0)"
       }
     },
-    "16680989-27d2-4332-8c5b-374431086842": {
-      "type": "faq-product",
+    "5e00dcc9-dc97-46d3-9cf6-c5dfd8dfdd35": {
+      "type": "details",
       "settings": {
-        "title": "FAQ Product"
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 50
       }
     },
     "22b35f26-fc1d-4d8e-bb82-500d0a7fdebb": {
@@ -159,42 +162,18 @@
         "text_color": "rgba(0,0,0,0)"
       }
     },
-    "195a5066-0b73-4e35-b351-b6b79dc6383d": {
-      "type": "details",
-      "blocks": {
-        "template--16644516643047__195a5066-0b73-4e35-b351-b6b79dc6383d-1669645381b012b004-0": {
-          "type": "detail",
-          "settings": {
-            "title": "title"
-          }
-        },
-        "template--16644516643047__195a5066-0b73-4e35-b351-b6b79dc6383d-1669645381b012b004-1": {
-          "type": "detail",
-          "settings": {
-            "title": "title"
-          }
-        },
-        "template--16644516643047__195a5066-0b73-4e35-b351-b6b79dc6383d-1669645381b012b004-2": {
-          "type": "detail",
-          "settings": {
-            "title": "title"
-          }
-        }
-      },
-      "block_order": [
-        "template--16644516643047__195a5066-0b73-4e35-b351-b6b79dc6383d-1669645381b012b004-0",
-        "template--16644516643047__195a5066-0b73-4e35-b351-b6b79dc6383d-1669645381b012b004-1",
-        "template--16644516643047__195a5066-0b73-4e35-b351-b6b79dc6383d-1669645381b012b004-2"
-      ],
+    "16680989-27d2-4332-8c5b-374431086842": {
+      "type": "faq-product",
       "settings": {
+        "title": "FAQ Product"
       }
     }
   },
   "order": [
     "main",
     "fe804fe5-c636-4492-862a-66f249fb9410",
-    "16680989-27d2-4332-8c5b-374431086842",
+    "5e00dcc9-dc97-46d3-9cf6-c5dfd8dfdd35",
     "22b35f26-fc1d-4d8e-bb82-500d0a7fdebb",
-    "195a5066-0b73-4e35-b351-b6b79dc6383d"
+    "16680989-27d2-4332-8c5b-374431086842"
   ]
 }

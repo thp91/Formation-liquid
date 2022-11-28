@@ -233,6 +233,7 @@ button--transparent{
 .product-form__more-info{
   background-color: #F0EAE6;
   padding: 20px;
+  margin-bottom: 30px;
 }
 
 .product-form__more-info-title{
@@ -257,7 +258,322 @@ button--transparent{
 
 /* Details */
 
+.animated-plus {
+  position: relative;
+  width: 27px;
+  height: 27px;
+  background: white;
+  border-radius: 50%;
+}
 
+.animated-plus::before,
+.animated-plus::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  background-color: currentColor;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.animated-plus::before {
+  width: 10px;
+  height: 2px;
+  opacity: 1;
+}
+
+.animated-plus::after {
+  width: 2px;
+  height: 10px;
+}
+
+[aria-expanded="true"] > .animated-plus::before {
+  opacity: 0;
+}
+
+[aria-expanded="true"] > .animated-plus::before,
+[aria-expanded="true"] > .animated-plus::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.ingredients__categories-container {
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0 28px;
+}
+
+.ingredients__categories {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  border-bottom: 4px solid #faf8f7;
+}
+
+.ingredients__categories.active {
+  border-bottom: 4px solid #131313;
+}
+
+.ingredients__categories .animated-plus {
+  position: absolute;
+  right: 25px;
+  bottom: 29px;
+  width: 43px;
+  height: 43px;
+}
+
+.ingredients__categories.active>.animated-plus:before {
+  opacity: 0;
+}
+
+.ingredients__categories.active>.animated-plus {
+  background-color: #131313;
+}
+
+.ingredients__categories.active>.animated-plus:before, .ingredients__categories.active>.animated-plus:after {
+  background-color: #ffffff;
+}
+
+.ingredients__content blockquote {
+  background: rgba(235, 224, 214, 0.49);
+  margin: 0;
+  padding: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 131%;
+}
+
+.ingredients__categories.active>.animated-plus:before, .ingredients__categories.active>.animated-plus:after {
+  transform: translate(-50%,-50%) rotate(90deg);
+}
+
+.ingredients__categories-image {
+  width: 100%;
+}
+
+.ingredients__categories-title {
+  position: absolute;
+  bottom: 23px;
+  left: 29px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 132%;
+  margin: 0;
+}
+
+.ingredients__content-container {
+  background-color: white;
+  margin-top: 29px;
+  max-height: 590px;
+  overflow-y: auto;
+  padding: 0 58px 0 25px;
+}
+
+.ingredients__content {
+  display: none;
+  /* max-height: 590px;
+  overflow-y: auto;
+  padding: 0 58px 0 25px; */
+  padding: 0px 25px 42px 25px;
+  grid-row-start: 4;
+  grid-column: 1/-1;
+  margin-top: 42px;
+  background: white;
+}
+
+.ingredients__content-container::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 40px;
+}
+
+/* Track */
+.ingredients__content-container::-webkit-scrollbar-track {
+  background: rgba(19, 19, 19, 0.1);
+  border-radius: 40px;
+}
+ 
+/* Handle */
+.ingredients__content-container::-webkit-scrollbar-thumb {
+  background: #131313; 
+  border-radius: 40px;
+}
+
+.ingredients__content.open {
+  display: block;
+}
+
+.ingredients__content-header {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 115%;
+  letter-spacing: -0.02em;
+}
+
+.ingredients__content-header br {
+  display: none;
+}
+
+.ingredients__content-button__container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 30px;
+  position: sticky;
+  top: 0px;
+  background: white;
+}
+
+.ingredients__content-button__container p,
+.ingredients__content-button__container meta {
+  display: none;
+}
+
+.ingredients__content-button__container:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  width: 100%;
+  height: 5px;
+  background: white;
+}
+
+h6.ingredients__content-button {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 131%;
+  letter-spacing: -0.01em;
+  margin: 0;
+  cursor: pointer;
+}
+
+h6.ingredients__content-button.active em {
+  background: #131313;
+  color: white;
+}
+
+h6.ingredients__content-button em {
+  font-style: unset;
+  background: #EEE6D1;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 22px;
+  margin-right: 5px;
+}
+
+h2.ingredients__content-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 131%;
+  letter-spacing: -0.01em;
+  margin-top: 29px;
+}
+
+h2.ingredients__content-title em {
+  font-style: unset;
+  background: #EEE6D1;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 22px;
+  margin-right: 5px;
+}
+
+.ingredients__content-container p:empty {
+  display: none;
+}
+
+.ingredients__readmore-button {
+  display: none;
+}
+
+@media screen and (max-width: 999px) {
+  .ingredients__categories-container {
+    grid-template-columns: unset;
+    gap: 20px 0;
+  }
+  .ingredients__content-button__container {
+    display: none;
+  }
+  .ingredients__content {
+    grid-row-start: unset;
+    margin: 0;
+    background: transparent;
+    padding: 0;
+  }
+  .ingredients__content-container {
+    padding: 0;
+    background-color: transparent;
+    overflow: hidden;
+    margin: 0;
+    max-height: none;
+  }
+  .ingredients__content-header {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 112%;
+  }
+  .ingredients__content blockquote {
+    padding: 16px 33px 16px 13px;
+  }
+  h2.ingredients__content-title {
+    margin: 17px 0;
+    padding: 0 12px;
+  }
+
+  h2.ingredients__content-title:not(:last-of-type):after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid rgba(19, 19, 19, 0.2);
+    margin-top: 17px;
+  }
+  .ingredients__content-title.active em {
+    background: #131313;
+    color: white;
+  }
+  .ingredients__content-title.active:after {
+    display: none !important;
+  }
+  .ingredients__accordion-content {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 131%;
+    display: none;
+    padding: 0 12px;
+  }
+  .ingredients__accordion-content.open {
+    display: block;
+  }
+  .ingredients__accordion-content:not(:last-of-type).open:after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid rgba(19, 19, 19, 0.2);
+    margin-top: 34px;
+  }
+  .ingredients__readmore-button {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    border-bottom: 1px solid;
+  }
+  .ingredients__readmore-button ~ * {
+    display: none;
+  }
+  .ingredients__readmore-button.hide {
+    display: none;
+  }
+  .ingredients__readmore-button.hide ~ * {
+    display: block;
+  }
+}
 
 
 /* ------------ END CUSTOM CSS ------------ */

@@ -47,13 +47,13 @@
   
   <section class="section {% unless blends_with_background %}section--flush{% endunless %}">
     <div class="section__color-wrapper">
-      <div class="container-ingredients{% unless blends_with_background %}vertical-breather{% endunless %}">
+      <div class="container-ingredients {% unless blends_with_background %}vertical-breather{% endunless %}">
         {%- if section.settings.title != blank or section.settings.content != blank -%}
-          <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %} section__header--{{ section.settings.column_alignment }}">
+          <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %} section__header--{{ section.settings.column_alignment }}" style="margin-left: auto; margin-right: auto;">
             <div class="text-container">
   
               {%- if section.settings.title != blank -%}
-                <h3 class="heading h4">{{ section.settings.title }}</h3>
+                <h3 class="heading h4" style="text-align: {{ section.settings.title_alignment }};">{{ section.settings.title }}</h3>
               {%- endif -%}
   
               {%- if section.settings.content != blank -%}
@@ -68,7 +68,7 @@
             {%- assign smallest_image_aspect_ratio = 0 -%}
   
             <div {% unless section.settings.stack_items %}class="scroller"{% endunless %}>
-              <scrollable-content class="multi-column__inner multi-column__inner--{{ section.settings.column_alignment }} {% unless section.settings.stack_items %}multi-column__inner--scroller{% endunless %}">
+              <scrollable-content class="multi-column__inner multi-column__inner--{{ section.settings.column_alignment }} {% unless section.settings.stack_items %}multi-column__inner--scroller{% endunless %}" style="column-gap: 40px;">
                 {%- case section.settings.desktop_item_size -%}
                   {%- when 'pico' -%}
                     {%- assign desktop_items_per_row = 8 -%}
@@ -156,13 +156,7 @@
                         {%- endif -%}
   
                         {%- if details.button_text != blank -%}
-                          {%- if section.blocks.settings.link_style == 'link' -%}
-                            <a href="{{ details.url }}" class="multi-column__link heading heading--small link">{{ details.button_text | escape }} <i class="fa-solid fa-arrow-right-long"></i></a>
-                          {%- else -%}
-                            <div class="button-wrapper">
-                              <a href="{{ details.url }}" class="multi-column__button button button--small button--primary">{{ details.button_text | escape }}</a>
-                            </div>
-                          {%- endif -%}
+                            <a href="{{ details.url }}" class="multi-column__link heading heading--small link">{{ details.button_text | escape }}</a>
                         {%- endif -%}
                       </div>
                     {%- endif -%}
@@ -199,104 +193,6 @@
 {
   "name": "Ingredients",
   "class": "shopify-section--multi-column",
-  "blocks": [
-    {
-      "name": "Column",
-      "type": "item",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image",
-          "info": "1200 x 1200px .jpg recommended"
-        },
-        {
-          "type": "color",
-          "id": "image_border",
-          "label": "Image border",
-          "default": "rgba(0,0,0,0)"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Heading",
-          "default": "Your content"
-        },
-        {
-          "type": "richtext",
-          "id": "content",
-          "label": "Content",
-          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
-        },
-        {
-          "type": "text",
-          "id": "link_text",
-          "label": "Link text"
-        },
-        {
-          "type": "url",
-          "id": "link_url",
-          "label": "Link"
-        },
-        {
-          "type": "select",
-          "id": "link_style",
-          "label": "Link style",
-          "options": [
-            {
-              "value": "link",
-              "label": "Link"
-            },
-            {
-              "value": "button",
-              "label": "Button"
-            }
-          ],
-          "default": "link"
-        },
-        {
-          "type": "select",
-          "id": "text_alignment",
-          "label": "Text alignment",
-          "options": [
-            {
-              "value": "left",
-              "label": "Left"
-            },
-            {
-              "value": "center",
-              "label": "Center"
-            },
-            {
-              "value": "right",
-              "label": "Right"
-            }
-          ],
-          "default": "center"
-        },
-        {
-          "type": "select",
-          "id": "vertical_alignment",
-          "label": "Vertical alignment",
-          "options": [
-            {
-              "value": "start",
-              "label": "Top"
-            },
-            {
-              "value": "center",
-              "label": "Center"
-            },
-            {
-              "value": "end",
-              "label": "Bottom"
-            }
-          ],
-          "default": "start"
-        }
-      ]
-    }
-  ],
   "settings": [
     {
       "type": "checkbox",
@@ -316,6 +212,26 @@
       "id": "title",
       "label": "Heading",
       "default": "Multi-column"
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "label": "title alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
     },
     {
       "type": "select",

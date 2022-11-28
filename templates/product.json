@@ -132,6 +132,8 @@
         "b7b1f290-4e4b-47fb-8848-0fb27b8389b6"
       ],
       "settings": {
+        "title": "Tous nos produits contiennent des actifs clefs.",
+        "title_alignment": "center",
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
@@ -147,7 +149,8 @@
       "settings": {
         "reveal_on_scroll": true,
         "stack_items": false,
-        "title": "Multi-column",
+        "title": "Ingrédients naturels à l’efficacité manifeste.",
+        "title_alignment": "center",
         "column_alignment": "center",
         "mobile_item_size": "medium",
         "desktop_item_size": "medium",

@@ -9163,6 +9163,7 @@ input:checked + .popover__choice-label::after,
 }
 .faq {
   position: relative;
+  margin-bottom: 30px;
 }
 
 .faq__category {
@@ -9215,10 +9216,7 @@ input:checked + .popover__choice-label::after,
 
 @media screen and (min-width: 1000px) {
   .faq__wrapper {
-    max-width: 668px;
-    width: calc(var(--grid-column-width) * 10 + var(--grid-gap) * 9);
-    margin-left: auto;
-    margin-right: auto;
+    
   }
 
   [dir="ltr"] .faq-navigation {

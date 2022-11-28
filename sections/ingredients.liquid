@@ -42,19 +42,12 @@
         }
       {%- endif -%}
     {%- endif -%}
-  
-    {%- for block in section.blocks -%}
-      {%- if block.settings.image_border != 'rgba(0,0,0,0)' -%}
-        #block-{{ section.id }}-{{ block.id }} .multi-column__image-wrapper {
-          border: 1px solid {{ block.settings.image_border }};
-        }
-      {%- endif -%}
-    {%- endfor -%}
+
   </style>
   
   <section class="section {% unless blends_with_background %}section--flush{% endunless %}">
     <div class="section__color-wrapper">
-      <div class="container {% unless blends_with_background %}vertical-breather{% endunless %}">
+      <div class="container-ingredients{% unless blends_with_background %}vertical-breather{% endunless %}">
         {%- if section.settings.title != blank or section.settings.content != blank -%}
           <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %} section__header--{{ section.settings.column_alignment }}">
             <div class="text-container">
@@ -70,7 +63,6 @@
           </header>
         {%- endif -%}
   
-        {%- if section.blocks.size > 0 -%}
           <multi-column {% if section.settings.stack_items %}stack{% endif %} {% if section.settings.reveal_on_scroll %}stagger-apparition{% endif %} class="multi-column multi-column--pocket-{{ section.settings.mobile_item_size }} multi-column--{{ section.settings.desktop_item_size }} multi-column--spacing-{{ section.settings.spacing }}">
             {%- assign align_arrows_on_image = true -%}
             {%- assign smallest_image_aspect_ratio = 0 -%}
@@ -135,40 +127,40 @@
                 {%- assign desktop_items_per_row_minus_one = desktop_items_per_row | minus: 1 -%}
                 {%- assign gap_width = desktop_item_gap | divided_by: desktop_items_per_row | times: desktop_items_per_row_minus_one -%}
   
-                {%- for block in section.blocks -%}
+                {%- for details in product.metafields.custom.ingredients.value.articles -%}
                   {%- capture block_content -%}
-                    {%- if block.settings.image != blank -%}
-                      {%- assign smallest_image_aspect_ratio = smallest_image_aspect_ratio | at_least: block.settings.image.aspect_ratio -%}
+                    {%- if details.image != blank -%}
+                      {%- assign smallest_image_aspect_ratio = smallest_image_aspect_ratio -%}
   
-                      {%- if block.settings.link_url != blank -%}
-                        <a href="{{ block.settings.link_url }}" class="multi-column__image-wrapper" style="max-width: {{ block.settings.image_width }}%; width: {{ block.settings.image.width }}px">
-                          <img loading="lazy" sizes="(max-width: 740px) {{ mobile_calculated_size }}, (max-width: 999px) {{ tablet_calculated_size }}, {{ 1520.0 | divided_by: desktop_items_per_row | minus: gap_width | ceil }}px" class="multi-column__image" {% render 'image-attributes', image: block.settings.image, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200' %}>
+                      {%- if details.url != blank -%}
+                        <a href="{{ details.url }}" class="multi-column__image-wrapper">
+                          <img loading="lazy" sizes="(max-width: 740px) {{ mobile_calculated_size }}, (max-width: 999px) {{ tablet_calculated_size }}, {{ 1520.0 | divided_by: desktop_items_per_row | minus: gap_width | ceil }}px" class="multi-column__image" src="{{ details.image }}">
                         </a>
                       {%- else -%}
-                        <div class="multi-column__image-wrapper" style="max-width: {{ block.settings.image_width }}%;">
-                          <img loading="lazy" sizes="(max-width: 740px) {{ mobile_calculated_size }}, (max-width: 999px) {{ tablet_calculated_size }}, {{ 1520.0 | divided_by: desktop_items_per_row | minus: gap_width | ceil }}px" class="multi-column__image" {% render 'image-attributes', image: block.settings.image, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200' %}>
+                        <div class="multi-column__image-wrapper">
+                          <img loading="lazy" sizes="(max-width: 740px) {{ mobile_calculated_size }}, (max-width: 999px) {{ tablet_calculated_size }}, {{ 1520.0 | divided_by: desktop_items_per_row | minus: gap_width | ceil }}px" class="multi-column__image" src="{{ details.image }}">
                         </div>
                       {%- endif -%}
                     {%- else -%}
                       {%- assign align_arrows_on_image = false -%}
                     {%- endif -%}
   
-                    {%- if block.settings.title != blank or block.settings.content != blank or block.settings.link_text != blank -%}
-                      <div class="multi-column__text-container text--{{ block.settings.text_alignment }} text-container{% if section.settings.text_on_image %} on-image {% endif %}">
-                        {%- if block.settings.title != blank -%}
-                          <p class="heading h4">{{ block.settings.title | escape }}</p>
+                    {%- if details.title != blank or details.description != blank or details.url != blank -%}
+                      <div class="multi-column__text-container text--{{ section.blocks.settings.text_alignment }} text-container">
+                        {%- if details.title != blank -%}
+                          <p class="heading h4">{{ details.title | escape }}</p>
                         {%- endif -%}
   
-                        {%- if block.settings.content != blank -%}
-                          {{- block.settings.content -}}
+                        {%- if details.description != blank -%}
+                          {{- details.description -}}
                         {%- endif -%}
   
-                        {%- if block.settings.link_text != blank -%}
-                          {%- if block.settings.link_style == 'link' -%}
-                            <a href="{{ block.settings.link_url }}" class="multi-column__link heading heading--small link">{{ block.settings.link_text | escape }} <i class="fa-solid fa-arrow-right-long"></i></a>
+                        {%- if details.button_text != blank -%}
+                          {%- if section.blocks.settings.link_style == 'link' -%}
+                            <a href="{{ details.url }}" class="multi-column__link heading heading--small link">{{ details.button_text | escape }} <i class="fa-solid fa-arrow-right-long"></i></a>
                           {%- else -%}
                             <div class="button-wrapper">
-                              <a href="{{ block.settings.link_url }}" class="multi-column__button button button--small button--primary">{{ block.settings.link_text | escape }}</a>
+                              <a href="{{ details.url }}" class="multi-column__button button button--small button--primary">{{ details.button_text | escape }}</a>
                             </div>
                           {%- endif -%}
                         {%- endif -%}
@@ -177,7 +169,7 @@
                   {%- endcapture -%}
   
                   {%- if block_content != blank -%}
-                    <div id="block-{{ section.id }}-{{ block.id }}" class="multi-column__item multi-column__item--align-{{ block.settings.vertical_alignment }} {% if block.settings.link_url != blank %}image-zoom{% endif %} {% unless section.settings.text_on_image %}not-on-image{% endunless %}" {% if section.settings.reveal_on_scroll %}reveal{% endif %} {{ block.shopify_attributes }}">
+                    <div id="block-{{ section.id }}-{{ block.id }}" class="multi-column__item" {% if section.settings.reveal_on_scroll %}reveal{% endif %} {{ block.shopify_attributes }}">
                       {{- block_content -}}
                     </div>
                   {%- endif -%}
@@ -199,7 +191,6 @@
               {%- endunless -%}
             </div>
           </multi-column>
-        {%- endif -%}
       </div>
     </div>
   </section>
@@ -318,12 +309,6 @@
       "type": "checkbox",
       "id": "stack_items",
       "label": "Stack items",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "text_on_image",
-      "label": "Text on image",
       "default": false
     },
     {

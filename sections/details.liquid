@@ -1,0 +1,72 @@
+<div class="ingredients__categories-container">
+    {% for metafield in product.metafields.custom.ingredients_content.value %}
+        <div class="ingredients__categories {% if forloop.first == true %}active{% endif %}">
+          <img loading="lazy" class="ingredients__categories-image" src="{{ section.blocks[forloop.index0].settings.image | img_url: '700x' }}" alt="{{ section.blocks[forloop.index0].settings.image.alt }}" />
+          <p class="ingredients__categories-title" style="color: {{ section.blocks[forloop.index0].settings.title_color }};">{{ section.blocks[forloop.index0].settings.title }}</p>
+          <span class="animated-plus"></span>
+        </div>
+        <div class="ingredients__content {% if forloop.first == true %}open{% endif %}">
+          <div class="ingredients__content-container">
+            <p class="ingredients__content-header">{{ section.blocks[forloop.index0].settings.title }}</p>
+            {% assign pageDescription = metafield.content %}
+            {% if pageDescription contains '<h6>' %}
+
+                {% assign pageDescription = pageDescription 
+                  | replace: '<h6>', '<h6 class="ingredients__content-button">' 
+                  | replace: '<h2>', '<h2 class="ingredients__content-title">'
+                  | replace: '##startmenu##', '<div class="ingredients__content-button__container">'
+                  | replace: '##endmenu##', '</div>'
+                  | replace: '##startcontent##', '<div class="ingredients__accordion-content">'
+                  | replace: '##endcontent##', '</div>'
+                  | replace: '<h4>', '<button class="ingredients__readmore-button">'
+                  | replace: '</h4>', '</button>'
+
+                %}
+
+            {% endif %}
+            {{ pageDescription }}
+          </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "details",
+  "blocks": [
+    {
+      "name": "Detail",
+      "type": "detail",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Details",
+      "blocks": [
+        {
+          "type": "detail"
+        },
+        {
+          "type": "detail"
+        },
+        {
+          "type": "detail"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

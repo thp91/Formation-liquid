@@ -62,6 +62,10 @@
             </div>
           </header>
         {%- endif -%}
+
+        {% assign count_ingredients = product.metafields.custom.ingredients.value.articles | size %}
+          
+        {% if count_ingredients > 1 %}
   
           <multi-column {% if section.settings.stack_items %}stack{% endif %} {% if section.settings.reveal_on_scroll %}stagger-apparition{% endif %} class="multi-column multi-column--pocket-{{ section.settings.mobile_item_size }} multi-column--{{ section.settings.desktop_item_size }} multi-column--spacing-{{ section.settings.spacing }}">
             {%- assign align_arrows_on_image = true -%}
@@ -126,7 +130,6 @@
   
                 {%- assign desktop_items_per_row_minus_one = desktop_items_per_row | minus: 1 -%}
                 {%- assign gap_width = desktop_item_gap | divided_by: desktop_items_per_row | times: desktop_items_per_row_minus_one -%}
-  
                 {%- for details in product.metafields.custom.ingredients.value.articles -%}
                   {%- capture block_content -%}
                     {%- if details.image != blank -%}
@@ -185,6 +188,13 @@
               {%- endunless -%}
             </div>
           </multi-column>
+
+          {% else %}
+
+          tawesxdfrtvghyb
+
+        {% endif %}
+
       </div>
     </div>
   </section>

@@ -97,6 +97,7 @@
       </div>
     </div>
 
+
     {%- if section.settings.show_taxes_included -%}
       {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
         <p class="product-meta__taxes-included text--small">
@@ -136,31 +137,78 @@
       </div>
     {%- endif -%}
   </product-meta>
+  
 
   {%- render 'product-form', product: product, update_url: update_url -%}
 
   {%- capture flickity_config -%}
-          {
-            "adaptiveHeight": true,
-            "dragThreshold": 10,
-            "fade": {% if section.settings.transition_effect == 'fade' %}true{% else %}false{% endif %},
-            "draggable": ">1",
-            "contain": true,
-            "percentPosition": false,
-            "pageDots": true,
-            "prevNextButtons": false
-          }
-          {%- endcapture -%}
-          <flickity-carousel flickity-config="{{ flickity_config | escape }}" id="product-{{ section.id }}-placeholder-media-list" class="product__media-list">
-  {% for block in section.blocks %}
-    {% if block.type == "slide" %}
-      <div class="product__media-item product-slider is-selected">
-        <img src="{{ block.settings.icon | img_url: "small" }}" />
-        <p>{{ block.settings.content }}</p>
+  {
+    "adaptiveHeight": true,
+    "dragThreshold": 10,
+    "fade": {% if section.settings.transition_effect == 'fade' %}true{% else %}false{% endif %},
+    "draggable": ">1",
+    "contain": true,
+    "percentPosition": false,
+    "pageDots": true,
+    "prevNextButtons": false
+  }
+  {%- endcapture -%}
+  <flickity-carousel flickity-config="{{ flickity_config | escape }}" id="product-{{ section.id }}-placeholder-media-list" class="product__media-list">
+{% for block in section.blocks %}
+{% if block.type == "slide" %}
+<div class="product__media-item product-slider is-selected">
+<img src="{{ block.settings.icon | img_url: "small" }}" />
+<p>{{ block.settings.content }}</p>
+</div>
+{% endif %}
+{% endfor %}
+</flickity-carousel>
+
+{% for block in section.blocks %}
+  {%- if block.type == 'more_info' -%}
+    {%- if product.metafields.custom.plus_product != blank -%}
+      <div class="product-form__more-info">
+        <div class=" heading h6 product-form__more-info-title">
+          <p>Le + produit</p>
+        </div>
+        <div class="product-form__more-info-content">
+          {{- product.metafields.custom.plus_product -}}
+        </div>
       </div>
     {% endif %}
-  {% endfor %}
-</flickity-carousel
+  {% endif %}
+
+  {%- if block.type == 'accordion' -%}
+
+  <div class="faq">
+
+    <div class="faq__wrapper" itemscope itemtype="https://schema.org/FAQPage">
+      {% for item in block.settings %}
+        {% assign title = 'accordion_title_' | append: forloop.index %}
+        {% assign content = 'accordion_text' | append: forloop.index %}
+
+        {% if block.settings[title] != blank %}
+            <div class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button is="toggle-button" class="collapsible-toggle text--strong" aria-controls="block-{{ section.id }}-{{ block.id | append: forloop.index }}" aria-expanded="false" itemprop="name">
+                {{- block.settings[title] -}}
+                <span class="animated-plus"></span>
+              </button>
+
+              <collapsible-content id="block-{{ section.id }}-{{ block.id | append: forloop.index }}" class="collapsible anchor" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" {{ block.shopify_attributes }}>
+                <div class="collapsible__content text-container" itemprop="text">
+                  {{ product.metafields.custom[content] }}
+                </div>
+              </collapsible-content>
+            </div>
+          {% endif %}
+
+          {% endfor %}
+    </div>
+  </div>
+
+{% endif %}
+{% endfor %}
+  
 
   {%- assign help_page = section.settings.help_page -%}
 

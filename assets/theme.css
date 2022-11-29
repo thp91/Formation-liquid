@@ -234,6 +234,7 @@ button--transparent{
   background-color: #F0EAE6;
   padding: 20px;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .product-form__more-info-title{
@@ -591,6 +592,10 @@ h2.ingredients__content-title em {
 }
 
 /* Product slider */
+
+.product__media-item p, ol{
+margin: 0;
+}
 
 
 
@@ -1021,14 +1026,15 @@ th {
 .flickity-page-dots{
   display: flex;
   gap: 20px;
+  cursor: pointer;
 }
 
 .flickity-page-dots li{
   list-style-type: "\2B58";
 }
 
-.flickity-page-dots li, .is-selected{
-  list-style-type: disc;
+.flickity-page-dots .is-selected{
+  list-style-type: "\25C9";
 }
 
 /* flickity-fade */

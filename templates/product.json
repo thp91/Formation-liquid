@@ -54,6 +54,20 @@
             "accordion_title_3": "Conseils d’utilisation",
             "accordion_title_4": "Science"
           }
+        },
+        "7342bac2-dab8-408b-a2e3-6dee30388eb8": {
+          "type": "slide",
+          "settings": {
+            "content": "Content",
+            "icon": "shopify:\/\/shop_images\/Group_3091.png"
+          }
+        },
+        "cb778b69-b9c0-4e9f-abde-cda0d5a85f06": {
+          "type": "slide",
+          "settings": {
+            "content": "Content",
+            "icon": "shopify:\/\/shop_images\/Group_3091.png"
+          }
         }
       },
       "block_order": [
@@ -63,7 +77,9 @@
         "1e179b28-21ec-42e4-ac72-9c1d8b74d70a",
         "4f4957bc-e409-46b7-b242-677adb89a35f",
         "1f046b64-4c80-4d43-9e82-99fcd1ee1ac4",
-        "70e01cfe-abdf-4af7-b8f1-bbafac689efe"
+        "70e01cfe-abdf-4af7-b8f1-bbafac689efe",
+        "7342bac2-dab8-408b-a2e3-6dee30388eb8",
+        "cb778b69-b9c0-4e9f-abde-cda0d5a85f06"
       ],
       "settings": {
         "show_vendor": false,

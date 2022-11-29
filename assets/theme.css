@@ -590,6 +590,8 @@ h2.ingredients__content-title em {
   padding-left: 50px;
 }
 
+/* Product slider */
+
 
 
 /* ------------ END CUSTOM CSS ------------ */
@@ -1014,6 +1016,19 @@ th {
 
 .flickity-rtl .flickity-page-dots {
   direction: rtl;
+}
+
+.flickity-page-dots{
+  display: flex;
+  gap: 20px;
+}
+
+.flickity-page-dots li{
+  list-style-type: "\2B58";
+}
+
+.flickity-page-dots li, .is-selected{
+  list-style-type: disc;
 }
 
 /* flickity-fade */
@@ -12312,9 +12327,10 @@ input:checked + .popover__choice-label::after,
 
 .product__media-list,
 .product__media-item {
-  display: block;
+  display: flex;
   min-width: 100%;
-  text-align: center;
+  gap: 20px;
+  align-items: center;
 }
 
 .product__media-item {

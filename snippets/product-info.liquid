@@ -139,6 +139,29 @@
 
   {%- render 'product-form', product: product, update_url: update_url -%}
 
+  {%- capture flickity_config -%}
+          {
+            "adaptiveHeight": true,
+            "dragThreshold": 10,
+            "fade": {% if section.settings.transition_effect == 'fade' %}true{% else %}false{% endif %},
+            "draggable": ">1",
+            "contain": true,
+            "percentPosition": false,
+            "pageDots": true,
+            "prevNextButtons": false
+          }
+          {%- endcapture -%}
+          <flickity-carousel flickity-config="{{ flickity_config | escape }}" id="product-{{ section.id }}-placeholder-media-list" class="product__media-list">
+  {% for block in section.blocks %}
+    {% if block.type == "slide" %}
+      <div class="product__media-item product-slider is-selected">
+        <img src="{{ block.settings.icon | img_url: "small" }}" />
+        <p>{{ block.settings.content }}</p>
+      </div>
+    {% endif %}
+  {% endfor %}
+</flickity-carousel
+
   {%- assign help_page = section.settings.help_page -%}
 
   {%- if section.settings.show_share_buttons or help_page != blank -%}

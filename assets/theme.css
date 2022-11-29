@@ -2156,9 +2156,28 @@ p + .button-group,
  * --------------------------------------------------------------------
  */
 
+ @media screen and (min-width: 600px){
 .vertical-breather {
   /* padding-top: var(--vertical-breather);
   padding-bottom: var(--vertical-breather); */
+  padding: 0 100px;
+}
+ }
+
+ @media screen and (max-width: 600px){
+
+  .flickity-page-dots{
+    justify-content: center;
+  }
+
+ }
+
+ .product__media-nav{
+  display: none !important;
+}
+
+.text-with-icons{
+  margin-top: 50px;
 }
 
 .vertical-breather--tight {
@@ -2344,6 +2363,7 @@ p + .button-group,
 .section__header {
   max-width: 1000px;
   margin-bottom: min(32px, var(--vertical-breather));
+  margin-top: 30px;
 }
 
 .section__header:only-child {
@@ -11621,7 +11641,7 @@ input:checked + .popover__choice-label::after,
   }
 
   .multi-column--pocket-medium .multi-column__inner--scroller {
-    grid-auto-columns: 35vw;
+    grid-auto-columns: 70vw;
   }
 
   .multi-column--pocket-large .multi-column__inner--scroller {

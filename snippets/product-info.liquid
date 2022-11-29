@@ -145,7 +145,7 @@
   {
     "adaptiveHeight": true,
     "dragThreshold": 10,
-    "fade": {% if section.settings.transition_effect == 'fade' %}true{% else %}false{% endif %},
+    "fade": true,
     "draggable": ">1",
     "contain": true,
     "percentPosition": false,
@@ -153,10 +153,10 @@
     "prevNextButtons": false
   }
   {%- endcapture -%}
-  <flickity-carousel flickity-config="{{ flickity_config | escape }}" id="product-{{ section.id }}-placeholder-media-list" class="product__media-list">
+  <flickity-carousel flickity-config="{{ flickity_config | escape }}" id="product-{{ section.id }}-placeholder-media-list" class="product__media-list product-carousel">
 {% for block in section.blocks %}
 {% if block.type == "slide" %}
-<div class="product__media-item product-slider is-selected">
+<div class="product__media-item product-carousel-content product-slider is-selected">
 <img src="{{ block.settings.icon | img_url: "small" }}" />
 <p>{{ block.settings.content }}</p>
 </div>

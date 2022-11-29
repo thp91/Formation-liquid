@@ -12333,10 +12333,18 @@ input:checked + .popover__choice-label::after,
 
 .product__media-list,
 .product__media-item {
-  display: flex;
   min-width: 100%;
+}
+
+.product-carousel-content{
   gap: 20px;
   align-items: center;
+  display: flex;
+}
+
+.product-carousel{
+  align-items: center;
+  display: flex;
 }
 
 .product__media-item {
@@ -12493,7 +12501,7 @@ input:checked + .popover__choice-label::after,
 }
 
 @media screen and (max-width: 999px) {
-  .product__media-list {
+  .product__media-list,  .product__media-list-custom{
     margin-left: calc(-1 * var(--container-gutter));
     margin-right: calc(-1 * var(--container-gutter));
   }

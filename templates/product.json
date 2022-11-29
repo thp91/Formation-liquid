@@ -30,15 +30,29 @@
         "1e179b28-21ec-42e4-ac72-9c1d8b74d70a": {
           "type": "slide",
           "settings": {
-            "content": "Content",
-            "icon": "shopify:\/\/shop_images\/Group_3091.png"
+            "content": "LIVRAISON OFFERTE DÈS 60€",
+            "icon": "shopify:\/\/shop_images\/Group_3162_e73a170c-cc4e-4122-9b76-41b3012027f7.png"
           }
         },
         "4f4957bc-e409-46b7-b242-677adb89a35f": {
           "type": "slide",
           "settings": {
-            "content": "Content",
-            "icon": "shopify:\/\/shop_images\/Group_3091.png"
+            "content": "FORMULATION CLEAN",
+            "icon": "shopify:\/\/shop_images\/Frame_10_5f93fe54-5f95-4c71-93a8-eac67db02c9b.png"
+          }
+        },
+        "7342bac2-dab8-408b-a2e3-6dee30388eb8": {
+          "type": "slide",
+          "settings": {
+            "content": "ACTIFS BREVETÉS",
+            "icon": "shopify:\/\/shop_images\/Frame_1.png"
+          }
+        },
+        "cb778b69-b9c0-4e9f-abde-cda0d5a85f06": {
+          "type": "slide",
+          "settings": {
+            "content": "BIODISPONIBILITÉS & DOSAGES OPTIMISÉS",
+            "icon": "shopify:\/\/shop_images\/Frame_11.png"
           }
         },
         "1f046b64-4c80-4d43-9e82-99fcd1ee1ac4": {
@@ -54,20 +68,6 @@
             "accordion_title_3": "Conseils d’utilisation",
             "accordion_title_4": "Science"
           }
-        },
-        "7342bac2-dab8-408b-a2e3-6dee30388eb8": {
-          "type": "slide",
-          "settings": {
-            "content": "Content",
-            "icon": "shopify:\/\/shop_images\/Group_3091.png"
-          }
-        },
-        "cb778b69-b9c0-4e9f-abde-cda0d5a85f06": {
-          "type": "slide",
-          "settings": {
-            "content": "Content",
-            "icon": "shopify:\/\/shop_images\/Group_3091.png"
-          }
         }
       },
       "block_order": [
@@ -76,10 +76,10 @@
         "buy_buttons",
         "1e179b28-21ec-42e4-ac72-9c1d8b74d70a",
         "4f4957bc-e409-46b7-b242-677adb89a35f",
-        "1f046b64-4c80-4d43-9e82-99fcd1ee1ac4",
-        "70e01cfe-abdf-4af7-b8f1-bbafac689efe",
         "7342bac2-dab8-408b-a2e3-6dee30388eb8",
-        "cb778b69-b9c0-4e9f-abde-cda0d5a85f06"
+        "cb778b69-b9c0-4e9f-abde-cda0d5a85f06",
+        "1f046b64-4c80-4d43-9e82-99fcd1ee1ac4",
+        "70e01cfe-abdf-4af7-b8f1-bbafac689efe"
       ],
       "settings": {
         "show_vendor": false,
@@ -172,6 +172,37 @@
     },
     "5e00dcc9-dc97-46d3-9cf6-c5dfd8dfdd35": {
       "type": "details",
+      "blocks": {
+        "6990a964-859d-4095-a7e4-2bc05fc818af": {
+          "type": "category",
+          "settings": {
+            "title": "Science",
+            "title_color": "#000",
+            "image": "shopify:\/\/shop_images\/Rectangle_1040_c31e6fc2-29e4-4e08-a246-5c617a54d3d4.png"
+          }
+        },
+        "2715505e-9dd9-46d2-8444-6ec181f0aaa9": {
+          "type": "category",
+          "settings": {
+            "title": "Efficacité& bienfaits",
+            "title_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/Rectangle_1040_copie.png"
+          }
+        },
+        "05c3bd74-217e-42bc-9d3a-a6bfc9c55f21": {
+          "type": "category",
+          "settings": {
+            "title": "Descriptiondétaillée",
+            "title_color": "#000",
+            "image": "shopify:\/\/shop_images\/Rectangle_1040_copie_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "6990a964-859d-4095-a7e4-2bc05fc818af",
+        "2715505e-9dd9-46d2-8444-6ec181f0aaa9",
+        "05c3bd74-217e-42bc-9d3a-a6bfc9c55f21"
+      ],
       "settings": {
         "padding_top": 50,
         "padding_bottom": 50,

@@ -2163,22 +2163,13 @@ p + .button-group,
 }
  }
 
- @media screen and (min-width: 600px){
-  .flickity-page-dots{
-    display: none !important;
-  }
- }
 
- @media screen and (max-width: 600px){
-  .product__media-nav{
-    display: none !important;
-  }
   .flickity-page-dots{
     justify-content: center;
     position: absolute;
     bottom: 30px;
+
   }
- }
 
  @media screen and (max-width: 600px){
   .custom-product-list__inner product-item:nth-child(n+3){
@@ -9581,10 +9572,7 @@ input:checked + .popover__choice-label::after,
 }
 
 @media screen and (max-width: 740px) {
-  .faq {
-    margin-left: calc(-1 * var(--container-gutter));
-    margin-right: calc(-1 * var(--container-gutter));
-  }
+
 
   .faq__item {
     padding-left: var(--container-gutter);

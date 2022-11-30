@@ -177,7 +177,7 @@
           "type": "category",
           "settings": {
             "title": "Science",
-            "title_color": "#000",
+            "title_color": "#000000",
             "image": "shopify:\/\/shop_images\/Rectangle_1040_c31e6fc2-29e4-4e08-a246-5c617a54d3d4.png"
           }
         },
@@ -193,7 +193,7 @@
           "type": "category",
           "settings": {
             "title": "Description détaillée",
-            "title_color": "#000",
+            "title_color": "#000000",
             "image": "shopify:\/\/shop_images\/Rectangle_1040_copie_2.png"
           }
         }
@@ -225,6 +225,19 @@
         "text_color": "rgba(0,0,0,0)"
       }
     },
+    "aefcaf4e-bda6-48cb-af8c-e7ee53243dc0": {
+      "type": "like-products",
+      "settings": {
+        "subheading": "",
+        "title": "Vous aimerez aussi",
+        "recommendations_count": 4,
+        "products": [
+
+        ],
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
     "16680989-27d2-4332-8c5b-374431086842": {
       "type": "faq-product",
       "settings": {
@@ -237,6 +250,7 @@
     "fe804fe5-c636-4492-862a-66f249fb9410",
     "5e00dcc9-dc97-46d3-9cf6-c5dfd8dfdd35",
     "22b35f26-fc1d-4d8e-bb82-500d0a7fdebb",
+    "aefcaf4e-bda6-48cb-af8c-e7ee53243dc0",
     "16680989-27d2-4332-8c5b-374431086842"
   ]
 }

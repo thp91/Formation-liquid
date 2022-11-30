@@ -2160,21 +2160,27 @@ p + .button-group,
 .vertical-breather {
   /* padding-top: var(--vertical-breather);
   padding-bottom: var(--vertical-breather); */
-  padding: 0 100px;
 }
+ }
+
+ @media screen and (min-width: 600px){
+  .flickity-page-dots{
+    display: none !important;
+  }
  }
 
  @media screen and (max-width: 600px){
-
+  .product__media-nav{
+    display: none !important;
+  }
   .flickity-page-dots{
     justify-content: center;
+    position: absolute;
+    bottom: 30px;
   }
-
  }
 
- .product__media-nav{
-  display: none !important;
-}
+
 
 .text-with-icons{
   margin-top: 50px;

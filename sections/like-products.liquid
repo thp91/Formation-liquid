@@ -48,7 +48,7 @@
     }
   </style>
   
-  <product-recommendations section-id="{{ section.id }}" product-id="{{ product.id }}" {% if use_recommendations %}use-automatic-recommendations recommendations-count="{{ section.settings.recommendations_count }}"{% endif %} class="section {% unless blends_with_background %}section--flush{% endunless %}">
+  <product-recommendations section-id="{{ section.id }}" product-id="{{ product.id }}" {% if use_recommendations %}use-automatic-recommendations{% endif %} class="section {% unless blends_with_background %}section--flush{% endunless %}">
     {%- if section.settings.products.count > 0 or recommendations.performed and recommendations.products.size > 0 -%}
       <div class="section__color-wrapper">
         <div class="container {% unless blends_with_background %}vertical-breather{% endunless %}">
@@ -70,8 +70,8 @@
           <product-list {% if settings.stagger_products_apparition %}stagger-apparition{% endif %} class="product-list product-list--center">
             {%- assign smallest_image_aspect_ratio = 0 -%}
   
-            <div class="scroller">
-              <div class="product-list__inner product-list__inner--scroller hide-scrollbar">
+            <div>
+              <div class="product-list__inner custom-product-list__inner">
                 {%- if use_recommendations -%}
                   {%- for product in product.metafields.custom.recommended_products.value -%}
                     {%- assign smallest_image_aspect_ratio = smallest_image_aspect_ratio | at_least: product.featured_media.aspect_ratio -%}
@@ -129,21 +129,6 @@
         "id": "title",
         "label": "Heading",
         "default": "You may also like"
-      },
-      {
-        "type": "range",
-        "id": "recommendations_count",
-        "min": 4,
-        "max": 10,
-        "label": "Recommendations count",
-        "default": 4
-      },
-      {
-        "type": "product_list",
-        "id": "products",
-        "label": "Manual products",
-        "info": "When selected, automatic recommendations do not show.",
-        "limit": 10
       },
       {
         "type": "header",

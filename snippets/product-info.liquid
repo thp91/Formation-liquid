@@ -153,7 +153,7 @@
     "prevNextButtons": false
   }
   {%- endcapture -%}
-  <flickity-carousel flickity-config="{{ flickity_config | escape }}" id="product-{{ section.id }}-placeholder-media-list" class="product__media-list product-carousel">
+  <flickity-carousel flickity-config="{{ flickity_config | escape }}" id="product-{{ section.id }}-placeholder-media-list" class="product__media-list product-carousel product-carousel-custom">
 {% for block in section.blocks %}
 {% if block.type == "slide" %}
 <div class="product__media-item product__media-item-custom product-carousel-content product-slider is-selected">

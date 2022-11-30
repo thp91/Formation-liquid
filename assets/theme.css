@@ -12386,9 +12386,26 @@ input:checked + .popover__choice-label::after,
   justify-content: space-between;
   align-items: center;
   bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
 }
+
+@media screen and (max-width: 999px){
+  .product__media-nav{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+@media screen and (max-width: 600px){
+  .product__info{
+    padding: 0 10px;
+  }
+}
+
+.product-carousel-custom .flickity-viewport{
+  height: 45px !important;
+}
+
 
 .product__thumbnail-scroll-shadow {
   max-width: 100%;

@@ -466,7 +466,8 @@
         proto.renderPosition = function(x) {
           var sideOffset = this.parent.originSide === "left" ? 1 : -1;
           var adjustedX = this.parent.options.percentPosition ? x * sideOffset * (this.parent.size.innerWidth / this.size.width) : x * sideOffset;
-          this.element.style.transform = "translateX(" + this.parent.getPositionValue(adjustedX) + ")";
+          this.element.style.transform = "translate(" + this.parent.getPositionValue(adjustedX) + ", -50%)";
+          this.element.style.top = "50%";
         };
         proto.select = function() {
           this.element.classList.add("is-selected");

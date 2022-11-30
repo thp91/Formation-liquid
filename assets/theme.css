@@ -2169,12 +2169,11 @@ p + .button-group,
   }
  }
 
-
-
-
-.text-with-icons{
-  margin-top: 50px;
+ @media screen and (min-width: 999px){
+.container__faq-custom .vertical-breather{
+  padding: 0 100px;
 }
+ }
 
 .vertical-breather--tight {
   padding-top: var(--vertical-breather-tight);
@@ -12275,10 +12274,6 @@ input:checked + .popover__choice-label::after,
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .product:not(.product--featured) {
-    margin-bottom: 80px;
   }
 
   .product__media {

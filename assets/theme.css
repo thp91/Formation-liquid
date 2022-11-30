@@ -12385,8 +12385,9 @@ input:checked + .popover__choice-label::after,
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  bottom: 0;
-  left: 50px;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .product__thumbnail-scroll-shadow {

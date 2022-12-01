@@ -9535,7 +9535,6 @@ input:checked + .popover__choice-label::after,
 }
 .faq {
   position: relative;
-  margin-bottom: 30px;
 }
 
 .faq__category {
@@ -12262,10 +12261,15 @@ input:checked + .popover__choice-label::after,
  * MAIN LAYOUT
  */
 
+ .diamond:after{
+  content: "\29EB";
+
+}
+
+
 @media screen and (max-width: 740px) {
   .product:not(.product--featured) {
     margin-top: var(--container-gutter);
-    margin-bottom: 36px;
   }
 }
 
@@ -12381,6 +12385,7 @@ input:checked + .popover__choice-label::after,
   justify-content: space-between;
   align-items: center;
   bottom: 10px;
+  left: 15px;
 }
 
 @media screen and (max-width: 999px){

@@ -23,7 +23,7 @@
     {%- endif -%}
 
     {% unless featured %}
-      <h1 class="product-meta__title heading h3">{{ product.title }}</h1>
+      <h1 class="product-meta__title heading h3">{{ product.title }} <i class="diamond"></i> {{ product.metafields.custom.rest_of_title }}</h1>
     {% else %}
       <h2 class="product-meta__title heading h3">
         <a href="{{ product.url }}">{{ product.title }}</a>

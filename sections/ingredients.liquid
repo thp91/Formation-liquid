@@ -44,6 +44,8 @@
     {%- endif -%}
 
   </style>
+
+  {% if count_ingredients > 1 %}
   
   <section class="section {% unless blends_with_background %}section--flush{% endunless %}">
     <div class="section__color-wrapper">
@@ -64,8 +66,6 @@
         {%- endif -%}
 
         {% assign count_ingredients = product.metafields.custom.ingredients.value.articles | size %}
-          
-        {% if count_ingredients > 1 %}
   
           <multi-column {% if section.settings.stack_items %}stack{% endif %} {% if section.settings.reveal_on_scroll %}stagger-apparition{% endif %} class="multi-column multi-column--pocket-{{ section.settings.mobile_item_size }} multi-column--{{ section.settings.desktop_item_size }} multi-column--spacing-{{ section.settings.spacing }}">
             {%- assign align_arrows_on_image = true -%}
@@ -189,15 +189,77 @@
             </div>
           </multi-column>
 
-          {% else %}
-
-          tawesxdfrtvghyb
-
-        {% endif %}
-
       </div>
     </div>
   </section>
+
+  {% else %}
+  <section class="section {% unless is_boxed or section.settings.text_position contains 'overlap' %}section--flush{% endunless %}">
+    <div {% if is_boxed %}class="container"{% endif %}>
+          <image-with-text-block {% if section.settings.reveal_on_scroll %}reveal-on-scroll{% endif %} class="image-with-text-block {% if section.settings.text_position contains 'overlap' %}image-with-text-block--overlap-{{ section.settings.text_position | split: '_' | last }}{% endif %}">
+            <div class="image-with-text-block__image-wrapper {% unless section.settings.background_color == "rgba(0,0,0,0)" %}custom-bg{% endunless %}">
+              {%- if section.settings.image != blank -%}
+                <img class="image-with-text-block__image {% if section.settings.mobile_image != blank %}hidden-pocket{% endif %}" {% if section.settings.reveal_on_scroll %}reveal{% endif %} loading="lazy" sizes="(max-width: 999px) 100vw, {% if section.settings.text_position contains 'overlap' %}72vw{% elsif section.settings.background_type == 'boxed' %}min(1520px, 100vw){% else %}100vw{% endif %}" {% render 'image-attributes', image: section.settings.image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' %}>
+      
+                {%- if section.settings.mobile_image != blank -%}
+                  <img class="image-with-text-block__image hidden-lap-and-up" {% if section.settings.reveal_on_scroll %}reveal{% endif %} loading="lazy" sizes="100vw" {% render 'image-attributes', image: section.settings.mobile_image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400' %}>
+                {%- endif -%}
+              {%- else -%}
+                {%- capture image_classes -%}image-with-text-block__image image-with-text-block__image--placeholder placeholder-background{%- endcapture -%}
+      
+                {%- if section.settings.reveal_on_scroll -%}
+                  {{- 'lifestyle-1' | placeholder_svg_tag: image_classes | replace: '<svg', '<svg reveal' -}}
+                {%- else -%}
+                  {{- 'lifestyle-1' | placeholder_svg_tag: image_classes -}}
+                {%- endif -%}
+              {%- endif -%}
+            </div> 
+      
+            {%- capture section_content -%}
+              {%- assign text_position = section.settings.text_position | split: '_' | last -%}
+      
+              <div {% if section.settings.reveal_on_scroll %}reveal{% endif %} class="image-with-text-block__content content-box content-box--small content-box--text-{{ section.settings.text_alignment}} content-box--{{ text_position }} text-container {% unless section.settings.background_color == "rgba(0,0,0,0)" %}custom-bg{% endunless %}">
+      
+                {%- if section.settings.title != blank -%}
+                  <h3 class="heading h2">
+                    <split-lines {% if section.settings.reveal_on_scroll %}reveal{% endif %}>{{ section.settings.title | escape }}</split-lines>
+                  </h3>
+                {%- endif -%}
+                
+                {% for details in product.metafields.custom.ingredients.value.articles %}
+
+                  <p>
+                    <split-lines {% if section.settings.reveal_on_scroll %}reveal{% endif %}>{{ details.title }}</split-lines>
+                  </p>
+
+      
+                <div class="image-with-text-block__text-container" {% if section.settings.reveal_on_scroll %}reveal{% endif %}>
+                  {%- if details.description != blank -%}
+                    {{- details.description -}}
+                  {%- endif -%}
+      
+                  {%- if details.button_text != blank -%}
+                    <div class="button-wrapper">
+                      <a href="{{ details.url }}">{{ details.button_text | escape }}</a>
+                    </div>
+                  {%- endif -%}
+                </div>
+              {% endfor %}
+              </div>
+            {%- endcapture -%}
+      
+            {% if is_boxed %}
+              {{- section_content -}}
+            {% else %}
+              <div class="container container--flush">
+                {{- section_content -}}
+              </div>
+            {% endif %}
+          </image-with-text-block>
+        </div>
+      </section>
+
+        {% endif %}
   
   {% schema %}
 {

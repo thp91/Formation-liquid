@@ -210,7 +210,7 @@ button--transparent{
   margin-top: 30px;
 }
 
-@media screen and (max-width: 740px){
+@media screen and (max-width: 999px){
   .footer__item.footer__item--newsletter {
       grid-row-start: 1;
   }
@@ -2315,7 +2315,7 @@ p + .button-group,
 
 .section {
   display: block;
-  margin: var(--vertical-breather) 0;
+  /* margin: var(--vertical-breather) 0; */
 }
 
 .shopify-section--text-with-icons .section{

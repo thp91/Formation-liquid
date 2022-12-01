@@ -4,7 +4,7 @@
 
   {%- for tag in product.tags -%}
     {%- if tag contains '__label' -%}
-      <span class="label label--custom{% if tag contains '__label2' %}2{% endif %}">{{ tag | remove: '__label' }}</span>
+      <span class="label label--custom">{{ tag | remove: '__label' }}</span>
     {%- endif -%}
   {%- endfor -%}
   <!-- PRODUCT META -->

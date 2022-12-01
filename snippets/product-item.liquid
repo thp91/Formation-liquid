@@ -115,7 +115,7 @@
         {%- endunless -%}
       {%- endif -%}
 
-      <a href="{{ product.url }}" class="product-item-meta__title h6">{{ product.title }}</a>
+      <a href="{{ product.url }}" class="product-item-meta__title h6">{{ product.title }} <span class="diamond"></span> {{ product.metafields.custom.rest_of_title }}</a>
 
       <p>{{ product.metafields.custom.description.value }}</p>
 

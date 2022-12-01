@@ -44,9 +44,6 @@ button--transparent{
 }
 
 @media screen and (max-width: 740px){
-  .content-box h2{
-    display: none;
-  }
   .slideshow__slide-inner{
     align-items: flex-start !important;
   }
@@ -10998,7 +10995,7 @@ input:checked + .popover__choice-label::after,
 
   .image-with-text-block--cover .image-with-text-block__content {
     padding: var(--container-gutter);
-    margin: var(--vertical-breather) var(--container-gutter);
+    margin: var(--vertical-breather) var(--container-gutter) !important;
   }
 }
 

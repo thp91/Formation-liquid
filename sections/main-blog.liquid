@@ -65,16 +65,7 @@
       </div>
     </div>
   {%- else -%}
-    {%- if section.settings.show_blog_title -%}
-      <div class="container">
-        <div class="page-header">
 
-          <div class="page-header__text-wrapper text-container">
-            <h1 class="heading h1">{{ blog.title }}</h1>
-          </div>
-        </div>
-      </div>
-    {%- endif -%}
 
     {%- if section.settings.show_tags and blog.all_tags.size > 0 -%}
       <link-bar class="link-bar">
@@ -87,12 +78,11 @@
                 <li class="link-bar__link-item {% if current_tags == blank %}link-bar__link-item--selected{% endif %}">
                   <a href="{{ blog.url }}" class="link-bar__link link--animated {% if current_tags == blank %}text--underlined{% endif %}">{{ blog.title }}</a>
                 </li>
-                
-                {{ blog.title }}
+              
 
-                {%- for title in blogs.title -%}
+                {%- for title in blogs-%}
                   <li class="link-bar__link-item {% if current_tags contains tag %}link-bar__link-item--selected{% endif %}">
-                    {{ title }}
+                    {{ title.title }}
                   </li>
                 {%- endfor -%}
               </ul>

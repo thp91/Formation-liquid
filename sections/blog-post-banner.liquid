@@ -46,8 +46,10 @@
 
   <div class="article__header-content text-container">
     {%- if section.settings.show_category and article.tags.size > 0 -%}
-      <a href="{{ blog.url }}/tagged/{{ article.tags.first | handle }}" class="article__category heading heading--small">{{ article.tags.first }}</a>
+      <a href="{{ blog.url }}" class="label label--custom">{{ blog.title }}</a>
+      <a href="{{ blog.url }}/tagged/{{ article.tags.first | handle }}" class="label label--custom">{{ article.tags.first }}</a>
     {%- endif -%}
+
 
     <h1 class="article__title heading h1">{{ article.title }}</h1>
 

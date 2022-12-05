@@ -3282,11 +3282,11 @@ p + .button-group,
 
 .label {
   display: inline-block;
-  padding: 0 5px;
+  padding: 5px 5px;
   vertical-align: top;
   font-family: var(--text-font-family);
   font-style: var(--text-font-style);
-  font-weight: var(--text-font-bold-weight);
+  font-weight: 500;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -8503,6 +8503,10 @@ input:checked + .popover__choice-label::after,
   z-index: 0; /* Creating new stacking context is needed on Safari to apply the border radius */
 }
 
+.article-item__image{
+  width: 100%;
+}
+
 [dir="ltr"] .article-item__arrow {
   right: 20px;
 }
@@ -8618,7 +8622,7 @@ input:checked + .popover__choice-label::after,
 
   /* When this layout is used, the most recent blog post takes larger part */
   .article-list--collage {
-    grid-template-columns: 1.37731fr 1fr;
+    grid-template-columns: 1fr 1fr;
     column-gap: 48px;
   }
 
@@ -8650,13 +8654,24 @@ input:checked + .popover__choice-label::after,
 
 @media screen and (min-width: 1200px) {
   .article-list {
-    margin-left: calc(var(--grid-column-width) + var(--grid-gap));
-    margin-right: calc(var(--grid-column-width) + var(--grid-gap));
+    /* margin-left: calc(var(--grid-column-width) + var(--grid-gap));
+    margin-right: calc(var(--grid-column-width) + var(--grid-gap)); */
   }
 
   .article-list--collage {
-    column-gap: 70px;
+    column-gap: 35px;
   }
+}
+
+.article-item__content{
+  position: relative;
+}
+
+.date_article{
+  position:absolute;
+  top: 0;
+  right: 0;
+  margin: 0 !important;
 }
 
 @media screen and (pointer: fine) {

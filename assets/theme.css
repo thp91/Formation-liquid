@@ -594,6 +594,14 @@ h2.ingredients__content-title em {
 margin: 0;
 }
 
+.article__content_blog{
+  width: 60%;
+  margin: auto;
+}
+
+.article__content_blog + img{
+  margin-left: 100px;
+}
 
 
 /* ------------ END CUSTOM CSS ------------ */
@@ -8650,6 +8658,10 @@ input:checked + .popover__choice-label::after,
     flex: none;
     margin-bottom: 0;
   }
+}
+
+.article-list--stacked .article-item:nth-child(1){
+  /* display: none; */
 }
 
 @media screen and (min-width: 1200px) {

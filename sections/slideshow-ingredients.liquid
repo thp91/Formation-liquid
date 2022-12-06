@@ -1,4 +1,6 @@
-<style>
+{% if blog.title == "Actifs" %}
+
+<style>  
     #shopify-section-{{ section.id }} {
       --progress-bar-color: {{ section.blocks.first.settings.text_color.red }}, {{ section.blocks.first.settings.text_color.green }}, {{ section.blocks.first.settings.text_color.blue }};
       --section-autoplay-duration: {% if section.settings.autoplay %}{{ section.settings.cycle_speed }}s{% else %}0s{% endif %};
@@ -30,8 +32,7 @@
       }
     {%- endfor -%}
   </style>
-  
-  {% if blog.title == "Actifs" %}
+
   
   <section class="section section--flush">
     <slide-show reveal-on-scroll {% if section.settings.autoplay %}auto-play{% endif %} transition-type="{{ section.settings.transition_type | escape }}" class="slideshow slideshow--{{ section.settings.section_height }}">
@@ -138,7 +139,7 @@
                 {%- assign text_alignment = block.settings.text_alignment -%}
   
                 <div class="slideshow__text-wrapper slideshow__text-wrapper--{{ block_alignment }} vertical-breather">
-                  <div class="content-box content-box-custom content-box--medium content-box--text-{{ text_alignment }} content-box--{{ block_position }} text-container">
+                  <div class="content-box content-box-custom content-box--medium content-box--text-{{ text_alignment }} content-box--{{ block_position }} text-container" style="background-color: {{ block.settings.text_background }}; padding: 100px 20px;">
                     {{- section_content -}}
                   </div>
                 </div>
@@ -398,6 +399,12 @@
             "id": "text_color",
             "label": "Text",
             "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "text_background",
+            "label": "Text background",
+            "default": "transparent"
           },
           {
             "type": "color",

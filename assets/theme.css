@@ -628,6 +628,12 @@ margin: 0;
 }
 }
 
+@media screen and (min-width: 999px){
+.image-with-text-block__content-ingredients{
+  padding: 100px 20px !important;
+}
+
+}
 
 /* ------------ END CUSTOM CSS ------------ */
 
@@ -11131,9 +11137,6 @@ input:checked + .popover__choice-label::after,
 }
 
 @media screen and (min-width: 1200px) {
-  .image-with-text-block {
-    min-height: 700px;
-  }
 
   .image-with-text-block--small {
     min-height: 400px;

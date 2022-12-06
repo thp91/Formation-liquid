@@ -11043,12 +11043,6 @@ input:checked + .popover__choice-label::after,
   }
 }
 
-@media screen and (max-width: 999px) {
-  .label--custom{
-    display: none;
-  }
-}
-
 @media screen and (min-width: 741px) and (max-width: 999px) {
   .image-with-text-block--cover .image-with-text-block__content {
     max-width: 400px;

@@ -2,7 +2,32 @@
   "sections": {
     "main": {
       "type": "main-blog",
+      "blocks": {
+        "a7224c63-1005-4f04-bc25-80b27510ce41": {
+          "type": "link_bar",
+          "settings": {
+            "title": "Science",
+            "url": "shopify:\/\/blogs\/science"
+          }
+        },
+        "8efe18ba-b25f-4cd7-a78f-5f3a7ce76539": {
+          "type": "link_bar",
+          "settings": {
+            "title": "Lifestyle",
+            "url": "shopify:\/\/blogs\/lifestyle"
+          }
+        }
+      },
+      "block_order": [
+        "a7224c63-1005-4f04-bc25-80b27510ce41",
+        "8efe18ba-b25f-4cd7-a78f-5f3a7ce76539"
+      ],
       "settings": {
+        "show_blog_title": true,
+        "show_tags": false,
+        "show_category": true,
+        "show_excerpt": true,
+        "articles_per_page": 9
       }
     }
   },

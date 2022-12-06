@@ -603,6 +603,23 @@ margin: 0;
   margin-left: 100px;
 }
 
+/* Blog */
+
+.main-blog__link-bar .container{
+  position: relative;
+}
+
+.link-bar__search-icon{
+  position: absolute !important;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.link-bar__wrapper{
+  position: unset !important;
+}
+
 
 /* ------------ END CUSTOM CSS ------------ */
 

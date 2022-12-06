@@ -620,6 +620,14 @@ margin: 0;
   position: unset !important;
 }
 
+/* Slideshow ingreidents */
+
+@media screen and (max-width: 999px){
+.content-box-custom{
+  margin-bottom: 40px;
+}
+}
+
 
 /* ------------ END CUSTOM CSS ------------ */
 

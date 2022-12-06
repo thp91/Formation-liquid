@@ -1,5 +1,7 @@
 <section>
 
+  {% unless blog.title == "Actifs" %}
+
   <blog-post-header class="article__header">
 
     <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb breadcrumb--floating text--xsmall hidden-phone">
@@ -23,15 +25,15 @@
         {%- endif -%}
       </ol>
     </nav>
-  
+
+    
+
     {%- for article in blog.articles limit: 1 -%}
       {%- comment -%}Performance note: this image must not be lazyloaded as it contributes to the LCP{%- endcomment -%}
       <div class="article__image-wrapper {% if article.image.aspect_ratio >= 1 %}article__image-wrapper--square{% else %}article__image-wrapper--tall{% endif %}">
         {%- capture sizes -%}(max-width: 740px) 100vw, {% if article.image.aspect_ratio >= 1 %}50vw{% else %}37.5vw{% endif %}{%- endcapture -%}
         {{ article.image | image_url: width: 1500 | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500', class: 'article__image', reveal: true }}
       </div>
-
-  
     <div class="article__header-content text-container">
       {%- if section.settings.show_category and article.tags.size > 0 -%}
         <a href="{{ blog.url }}" class="label label--custom">{{ blog.title }}</a>
@@ -53,6 +55,8 @@
     </div>
   {%- endfor -%}
   </blog-post-header>
+
+{% endunless %}
 
   {%- if blog.articles_count == 0 -%}
     <div class="empty-state text-container">

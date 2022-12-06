@@ -1,5 +1,41 @@
 {
   "sections": {
+    "6e21c28e-1fc7-4e97-98bd-770e9553821e": {
+      "type": "slideshow-ingredients",
+      "blocks": {
+        "template--16644515889383__6e21c28e-1fc7-4e97-98bd-770e9553821e-16703431866b370057-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_1052_33ba056e-d42b-49c1-b26e-8d697e041b12.png",
+            "mobile_image": "shopify:\/\/shop_images\/image_89.png",
+            "block_position": "middle_center",
+            "text_alignment": "center",
+            "subheading": "Anti-âge Premium contient des composés antioxydants et anti-inflammatoires qui aident à régénérer.",
+            "title": "Actifs",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_border": "#000000",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "template--16644515889383__6e21c28e-1fc7-4e97-98bd-770e9553821e-16703431866b370057-0"
+      ],
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
     "main": {
       "type": "main-blog",
       "blocks": {
@@ -32,6 +68,7 @@
     }
   },
   "order": [
+    "6e21c28e-1fc7-4e97-98bd-770e9553821e",
     "main"
   ]
 }

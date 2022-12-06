@@ -5839,12 +5839,7 @@ select:focus,
      Small and medium variation on mobile have some extra spacing and are not directly based on the grid. We also
      apply extra margin if the content box is contained within a flushed mobile container
    */
-  .content-box--small,
-  .content-box--medium,
-  .container--flush .content-box--large {
-    margin-left: 24px;
-    margin-right: 24px;
-  }
+
 
   /* Positional variation */
 

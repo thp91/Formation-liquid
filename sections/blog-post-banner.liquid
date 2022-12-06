@@ -36,6 +36,7 @@
     </ol>
   </nav>
 
+
   {%- if article.image -%}
     {%- comment -%}Performance note: this image must not be lazyloaded as it contributes to the LCP{%- endcomment -%}
     <div class="article__image-wrapper {% if article.image.aspect_ratio >= 1 %}article__image-wrapper--square{% else %}article__image-wrapper--tall{% endif %}">
@@ -56,6 +57,7 @@
     {%- if article.excerpt != blank -%}
       <div class="article__excerpt text--large">
         {{- article.excerpt -}}
+        {{ blog.title }}
       </div>
     {%- endif -%}
   </div>

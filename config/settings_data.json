@@ -63,6 +63,66 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "829c4512-fce7-4385-a603-359c7f67b9ec": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "BEAUTÉ",
+              "images_position": "right",
+              "image_1": "shopify:\/\/shop_images\/img.png",
+              "image_1_heading": "Toute la beauté",
+              "image_1_text": "",
+              "image_1_link": "shopify:\/\/collections\/beaute",
+              "image_2": "shopify:\/\/shop_images\/image_84_1.png",
+              "image_2_heading": "Offres",
+              "image_2_text": "",
+              "image_2_link": "shopify:\/\/collections\/tous-les-produits",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "28e68283-17fe-4ded-9d9a-1e5829fa927a": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "SANTÉ",
+              "images_position": "right",
+              "image_1": "shopify:\/\/shop_images\/img-2.png",
+              "image_1_heading": "Toute la santé",
+              "image_1_text": "",
+              "image_1_link": "shopify:\/\/collections\/tous-les-produits",
+              "image_2": "shopify:\/\/shop_images\/image_84_1.png",
+              "image_2_heading": "Offres",
+              "image_2_text": "",
+              "image_2_link": "shopify:\/\/collections\/beaute",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "829c4512-fce7-4385-a603-359c7f67b9ec",
+          "28e68283-17fe-4ded-9d9a-1e5829fa927a"
+        ],
         "settings": {
           "enable_sticky_header": true,
           "logo": "shopify:\/\/shop_images\/Group_2730_c3691a2e-8c9b-460c-b9d0-2369d41cb650.png",
@@ -71,7 +131,7 @@
           "navigation_menu": "main-menu",
           "secondary_menu": true,
           "navigation_menu_last": "main-menu2",
-          "sidebar_navigation_menu": "",
+          "sidebar_navigation_menu": "menu-mobile",
           "header_layout": "logo_center_navigation_inline",
           "show_icons": true,
           "reduce_desktop_padding": false,

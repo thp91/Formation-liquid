@@ -42,6 +42,16 @@
 <section class="section {% unless blends_with_background or is_boxed %}section--flush{% endunless %}">
   <div class="section__color-wrapper">
     <div class="container {% unless blends_with_background %}vertical-breather{% endunless %}">
+
+      <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %} section__header--{{ section.settings.column_alignment }}" style="margin-left: auto; margin-right: auto;">
+        <div class="text-container">
+
+          {%- if section.settings.title != blank -%}
+            <h3 class="heading h4" style="text-align: {{ section.settings.title_alignment }};">{{ section.settings.title }}</h3>
+          {%- endif -%}
+        </div>
+      </header>
+
       <native-carousel class="text-with-icons">
         <div class="text-with-icons__list hide-scrollbar">
           {%- for block in section.blocks -%}
@@ -284,6 +294,32 @@
     }
   ],
   "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "label": "title alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
     {
       "type": "color",
       "id": "background",

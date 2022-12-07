@@ -1,30 +1,79 @@
 {
   "sections": {
+    "f1209ed7-5db3-4165-951d-8c77392e2a29": {
+      "type": "image-with-text-block-ingredients",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify:\/\/shop_images\/Rectangle_1052_1.png",
+        "subheading": "Anti-âge Premium contient des composés antioxydants et anti-inflammatoires qui aident à régénérer, protéger et apaiser les peaux matures.",
+        "title": "Le collagène",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_position": "left",
+        "text_alignment": "left",
+        "text_color": "rgba(0,0,0,0)",
+        "text_background": "#faf8f7",
+        "button_background": "rgba(0,0,0,0)",
+        "button_border": "rgba(0,0,0,0)",
+        "background_color": "#ffffff",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
     "blog-post-banner": {
       "type": "blog-post-banner",
       "settings": {
+        "show_category": true,
+        "blog_header_background": "#f0eae6",
+        "blog_header_text_color": "#282828"
       }
     },
     "main": {
       "type": "main-article",
       "settings": {
-      }
-    },
-    "blog-post-prev-next": {
-      "type": "blog-post-prev-next",
-      "settings": {
+        "show_on_scroll_navigation": true,
+        "show_author": true,
+        "show_date": true,
+        "show_share_buttons": true
       }
     },
     "blog-post-comments": {
       "type": "blog-post-comments",
       "settings": {
+        "show_gravatar": true
+      }
+    },
+    "54af614e-00b7-4631-aa30-98b2b4760744": {
+      "type": "related-product",
+      "settings": {
+        "subheading": "",
+        "title": "Vos indispensables soin beauté",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "fb5562e4-7564-456b-8aee-7a290dfca192": {
+      "type": "blog-posts",
+      "settings": {
+        "blog": "science",
+        "subheading": "",
+        "title": "Sur le même sujet",
+        "articles_count": 3,
+        "stack_mobile": false,
+        "show_category": true,
+        "show_excerpt": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
       }
     }
   },
   "order": [
+    "f1209ed7-5db3-4165-951d-8c77392e2a29",
     "blog-post-banner",
     "main",
-    "blog-post-prev-next",
-    "blog-post-comments"
+    "blog-post-comments",
+    "54af614e-00b7-4631-aa30-98b2b4760744",
+    "fb5562e4-7564-456b-8aee-7a290dfca192"
   ]
 }

@@ -23,7 +23,7 @@
       {%- endfor -%}
 
       <a href="{{ blog_url | remove_first: '/' }}/tagged/{{ article.tags.first | handle }}" class="article-item__category heading heading--xsmall">{{ article.tags.first }}</a>
-    {%- endif -%}
+      <p class="date_article">{{ article.published_at | date: "%d-%m-%y" | replace: '-', '.' }}</p>    {%- endif -%}
 
     <h3 class="article-item__title heading {{ heading_size }}">
       <a href="{{ article.url }}">{{ article.title }}</a>

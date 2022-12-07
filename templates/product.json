@@ -26,12 +26,60 @@
             "buy_now_button_background": "rgba(0,0,0,0)",
             "buy_now_button_text_color": "rgba(0,0,0,0)"
           }
+        },
+        "1e179b28-21ec-42e4-ac72-9c1d8b74d70a": {
+          "type": "slide",
+          "settings": {
+            "content": "LIVRAISON OFFERTE DÈS 60€",
+            "icon": "shopify:\/\/shop_images\/Group_3162_e73a170c-cc4e-4122-9b76-41b3012027f7.png"
+          }
+        },
+        "4f4957bc-e409-46b7-b242-677adb89a35f": {
+          "type": "slide",
+          "settings": {
+            "content": "FORMULATION CLEAN",
+            "icon": "shopify:\/\/shop_images\/Frame_10_5f93fe54-5f95-4c71-93a8-eac67db02c9b.png"
+          }
+        },
+        "7342bac2-dab8-408b-a2e3-6dee30388eb8": {
+          "type": "slide",
+          "settings": {
+            "content": "ACTIFS BREVETÉS",
+            "icon": "shopify:\/\/shop_images\/Frame_1.png"
+          }
+        },
+        "cb778b69-b9c0-4e9f-abde-cda0d5a85f06": {
+          "type": "slide",
+          "settings": {
+            "content": "BIODISPONIBILITÉS & DOSAGES OPTIMISÉS",
+            "icon": "shopify:\/\/shop_images\/Frame_11.png"
+          }
+        },
+        "1f046b64-4c80-4d43-9e82-99fcd1ee1ac4": {
+          "type": "more_info",
+          "settings": {
+          }
+        },
+        "70e01cfe-abdf-4af7-b8f1-bbafac689efe": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title_1": "Efficacité & bienfaits",
+            "accordion_title_2": "Composition détaillée",
+            "accordion_title_3": "Conseils d’utilisation",
+            "accordion_title_4": "Science"
+          }
         }
       },
       "block_order": [
         "variant_picker",
         "a027f92b-03ff-4646-b084-8d0b2c9e1454",
-        "buy_buttons"
+        "buy_buttons",
+        "1e179b28-21ec-42e4-ac72-9c1d8b74d70a",
+        "4f4957bc-e409-46b7-b242-677adb89a35f",
+        "7342bac2-dab8-408b-a2e3-6dee30388eb8",
+        "cb778b69-b9c0-4e9f-abde-cda0d5a85f06",
+        "1f046b64-4c80-4d43-9e82-99fcd1ee1ac4",
+        "70e01cfe-abdf-4af7-b8f1-bbafac689efe"
       ],
       "settings": {
         "show_vendor": false,
@@ -49,26 +97,139 @@
         "transition_effect": "slide"
       }
     },
-    "product-content": {
-      "type": "product-content",
+    "fe804fe5-c636-4492-862a-66f249fb9410": {
+      "type": "text-with-icons",
       "blocks": {
-        "description": {
-          "type": "description",
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-0": {
+          "type": "item",
           "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Sans aucuns ingrédients controversés",
+            "content": ""
+          }
+        },
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Clean & Green",
+            "content": ""
+          }
+        },
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Aromes & colorants naturelles",
+            "content": ""
+          }
+        },
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Sans sucre ajouté, ni gluten, ni lactose",
+            "content": ""
+          }
+        },
+        "167ff7ae-0c3b-4c34-8d03-2ac0655f08f6": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Ingrédients d’origines naturelles",
+            "content": ""
+          }
+        },
+        "b7b1f290-4e4b-47fb-8848-0fb27b8389b6": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Sans conservateurs ni édulcorants",
+            "content": ""
           }
         }
       },
       "block_order": [
-        "description"
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-0",
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-1",
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-2",
+        "template--16617427927271__fe804fe5-c636-4492-862a-66f249fb9410-1668790003e13e174f-3",
+        "167ff7ae-0c3b-4c34-8d03-2ac0655f08f6",
+        "b7b1f290-4e4b-47fb-8848-0fb27b8389b6"
       ],
       "settings": {
+        "title": "Tous nos produits contiennent des actifs clefs.",
+        "title_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
       }
     },
-    "product-recommendations": {
-      "type": "product-recommendations",
+    "5e00dcc9-dc97-46d3-9cf6-c5dfd8dfdd35": {
+      "type": "details",
+      "blocks": {
+        "6990a964-859d-4095-a7e4-2bc05fc818af": {
+          "type": "category",
+          "settings": {
+            "title": "Science",
+            "title_color": "#000000",
+            "image": "shopify:\/\/shop_images\/Rectangle_1040_c31e6fc2-29e4-4e08-a246-5c617a54d3d4.png"
+          }
+        },
+        "2715505e-9dd9-46d2-8444-6ec181f0aaa9": {
+          "type": "category",
+          "settings": {
+            "title": "Efficacité & bienfaits",
+            "title_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/Rectangle_1040_copie.png"
+          }
+        },
+        "05c3bd74-217e-42bc-9d3a-a6bfc9c55f21": {
+          "type": "category",
+          "settings": {
+            "title": "Description détaillée",
+            "title_color": "#000000",
+            "image": "shopify:\/\/shop_images\/Rectangle_1040_copie_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "6990a964-859d-4095-a7e4-2bc05fc818af",
+        "2715505e-9dd9-46d2-8444-6ec181f0aaa9",
+        "05c3bd74-217e-42bc-9d3a-a6bfc9c55f21"
+      ],
+      "settings": {
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "22b35f26-fc1d-4d8e-bb82-500d0a7fdebb": {
+      "type": "ingredients",
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "title": "Ingrédients naturels à l’efficacité manifeste.",
+        "title_alignment": "center",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "#f0eae6",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "aefcaf4e-bda6-48cb-af8c-e7ee53243dc0": {
+      "type": "like-products",
       "settings": {
         "subheading": "",
-        "title": "You may also like",
+        "title": "Vous aimerez aussi",
         "recommendations_count": 4,
         "products": [
 
@@ -76,11 +237,20 @@
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
+    },
+    "16680989-27d2-4332-8c5b-374431086842": {
+      "type": "faq-product",
+      "settings": {
+        "title": "FAQ Product"
+      }
     }
   },
   "order": [
     "main",
-    "product-content",
-    "product-recommendations"
+    "fe804fe5-c636-4492-862a-66f249fb9410",
+    "5e00dcc9-dc97-46d3-9cf6-c5dfd8dfdd35",
+    "22b35f26-fc1d-4d8e-bb82-500d0a7fdebb",
+    "aefcaf4e-bda6-48cb-af8c-e7ee53243dc0",
+    "16680989-27d2-4332-8c5b-374431086842"
   ]
 }

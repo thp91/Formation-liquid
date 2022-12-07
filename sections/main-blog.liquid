@@ -1,4 +1,63 @@
 <section>
+
+  {% unless blog.title == "Actifs" %}
+
+  <blog-post-header class="article__header">
+
+    <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb breadcrumb--floating text--xsmall hidden-phone">
+      <ol class="breadcrumb__list" role="list">
+        <li class="breadcrumb__item">
+          <a class="breadcrumb__link" href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a>
+        </li>
+
+        <li class="breadcrumb__item">
+          {%- if current_tags -%}
+            <a class="breadcrumb__link" href="{{ collection.url }}">{{ blog.title }}</a>
+          {%- else -%}
+            <span class="breadcrumb__link" aria-current="page">{{ blog.title }}</span>
+          {%- endif -%}
+        </li>
+
+        {%- if current_tags -%}
+          <li class="breadcrumb__item">
+            <span class="breadcrumb__link" aria-current="page">{{ current_tags.first | split: '_' | last }}</span>
+          </li>
+        {%- endif -%}
+      </ol>
+    </nav>
+
+    
+
+    {%- for article in blog.articles limit: 1 -%}
+      {%- comment -%}Performance note: this image must not be lazyloaded as it contributes to the LCP{%- endcomment -%}
+      <div class="article__image-wrapper {% if article.image.aspect_ratio >= 1 %}article__image-wrapper--square{% else %}article__image-wrapper--tall{% endif %}">
+        {%- capture sizes -%}(max-width: 740px) 100vw, {% if article.image.aspect_ratio >= 1 %}50vw{% else %}37.5vw{% endif %}{%- endcapture -%}
+        {{ article.image | image_url: width: 1500 | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500', class: 'article__image', reveal: true }}
+      </div>
+    <div class="article__header-content text-container">
+      {%- if section.settings.show_category and article.tags.size > 0 -%}
+        <a href="{{ blog.url }}" class="label label--custom">{{ blog.title }}</a>
+        <a href="{{ blog.url }}/tagged/{{ article.tags.first | handle }}" class="label label--custom">{{ article.tags.first }}</a>
+      {%- endif -%}
+  
+  
+      <h1 class="article__title heading h1">{{ article.title }}</h1>
+  
+      {%- if article.excerpt != blank -%}
+        <div class="article__excerpt text--large">
+          {{- article.excerpt -}}
+        </div>
+      {%- endif -%}
+
+      <a href="{{ article.url }}" class="multi-column__link heading heading--small link">Lire l'article <i class="fa-solid fa-arrow-right-long"></i></a>
+
+
+    </div>
+  {%- endfor -%}
+  </blog-post-header>
+
+{% endunless %}
+
   {%- if blog.articles_count == 0 -%}
     <div class="empty-state text-container">
       <h1 class="heading h1">{{ blog.title }}</h1>
@@ -10,67 +69,66 @@
       </div>
     </div>
   {%- else -%}
-    {%- if section.settings.show_blog_title -%}
+
+
+  {%- if section.settings.show_tags and blog.all_tags.size > 0 -%}
+    <link-bar class="link-bar main-blog__link-bar">
       <div class="container">
-        <div class="page-header">
-          <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb breadcrumb--floating text--xsmall hidden-phone">
-            <ol class="breadcrumb__list" role="list">
-              <li class="breadcrumb__item">
-                <a class="breadcrumb__link" href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a>
+        <div class="link-bar__wrapper">
+          {% comment %} <span class="link-bar__title heading heading--small text--subdued">{{ 'blog.general.view' | t }}</span> {% endcomment %}
+
+          <div class="link-bar__scroller hide-scrollbar">
+            <ul class="link-bar__linklist list--unstyled" role="list">
+              <li class="link-bar__link-item {% if current_tags == blank %}link-bar__link-item--selected{% endif %}">
+                <a href="{{ blog.url }}" class="link-bar__link link--animated {% if current_tags == blank %}text--underlined{% endif %}">{{ 'blog.general.all_posts' | t }}</a>
               </li>
 
-              <li class="breadcrumb__item">
-                {%- if current_tags -%}
-                  <a class="breadcrumb__link" href="{{ collection.url }}">{{ blog.title }}</a>
-                {%- else -%}
-                  <span class="breadcrumb__link" aria-current="page">{{ blog.title }}</span>
-                {%- endif -%}
-              </li>
+              {%- for tag in blog.all_tags -%}
+                <li class="link-bar__link-item {% if current_tags contains tag %}link-bar__link-item--selected{% endif %}">
+                  {%- capture link_to_tag_replacement -%}class="link-bar__link link--animated {% if current_tags contains tag %}text--underlined{% endif %}" title={%- endcapture -%}
 
-              {%- if current_tags -%}
-                <li class="breadcrumb__item">
-                  <span class="breadcrumb__link" aria-current="page">{{ current_tags.first | split: '_' | last }}</span>
+                  {%- if current_tags contains tag -%}
+                    {{ tag | link_to_remove_tag: tag | replace: 'title=', link_to_tag_replacement }}
+                  {%- else -%}
+                    {{- tag | link_to_tag: tag | replace: 'title=', link_to_tag_replacement -}}
+                  {%- endif -%}
                 </li>
-              {%- endif -%}
-            </ol>
-          </nav>
+              {%- endfor -%}
+            </ul>
 
-          <div class="page-header__text-wrapper text-container">
-            <h1 class="heading h1">{{ blog.title }}</h1>
+              <a href="{{ routes.search_url }}" is="toggle-link" class="link-bar__search-icon tap-area" aria-label="{{ 'search.general.title' | t | escape }}" aria-controls="search-drawer" aria-expanded="false">
+                {%- render 'icon' with 'header-search' -%}
+              </a>
+
           </div>
         </div>
       </div>
-    {%- endif -%}
-
-    {%- if section.settings.show_tags and blog.all_tags.size > 0 -%}
-      <link-bar class="link-bar">
+    </link-bar>
+  {% else %}
+    {% unless blog.metafields.custom.hide_link_bar == true %}
+      <link-bar class="link-bar main-blog__link-bar">
         <div class="container">
           <div class="link-bar__wrapper">
-            <span class="link-bar__title heading heading--small text--subdued">{{ 'blog.general.view' | t }}</span>
-
+            {% comment %} <span class="link-bar__title heading heading--small text--subdued">{{ 'blog.general.view' | t }}</span> {% endcomment %}
             <div class="link-bar__scroller hide-scrollbar">
               <ul class="link-bar__linklist list--unstyled" role="list">
-                <li class="link-bar__link-item {% if current_tags == blank %}link-bar__link-item--selected{% endif %}">
-                  <a href="{{ blog.url }}" class="link-bar__link link--animated {% if current_tags == blank %}text--underlined{% endif %}">{{ 'blog.general.all_posts' | t }}</a>
-                </li>
-
-                {%- for tag in blog.all_tags -%}
-                  <li class="link-bar__link-item {% if current_tags contains tag %}link-bar__link-item--selected{% endif %}">
-                    {%- capture link_to_tag_replacement -%}class="link-bar__link link--animated {% if current_tags contains tag %}text--underlined{% endif %}" title={%- endcapture -%}
-
-                    {%- if current_tags contains tag -%}
-                      {{ tag | link_to_remove_tag: tag | replace: 'title=', link_to_tag_replacement }}
-                    {%- else -%}
-                      {{- tag | link_to_tag: tag | replace: 'title=', link_to_tag_replacement -}}
-                    {%- endif -%}
+                {%- for block in section.blocks -%}
+                  <li class="link-bar__link-item {% if blog.url == block.settings.url %}link-bar__link-item--selected{% endif %}">
+                    <a href="{{ block.settings.url }}" class="link-bar__link link--animated {% if blog.url == block.settings.url %}text--underlined{% endif %}">{{ block.settings.title }}</a>
                   </li>
                 {%- endfor -%}
               </ul>
+
+              <a href="{{ routes.search_url }}" is="toggle-link" class="link-bar__search-icon tap-area" aria-label="{{ 'search.general.title' | t | escape }}" aria-controls="search-drawer" aria-expanded="false">
+                {%- render 'icon' with 'header-search' -%}
+              </a>
+
             </div>
           </div>
         </div>
       </link-bar>
-    {%- endif -%}
+    {% endunless %}
+  {%- endif -%}
 
     <div class="vertical-breather vertical-breather--margin vertical-breather--extra-tight">
       <div class="container">
@@ -127,6 +185,24 @@
       "max": 48,
       "step": 3,
       "default": 9
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_bar",
+      "name": "Link bar",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "url"
+        }
+      ]
     }
   ]
 }

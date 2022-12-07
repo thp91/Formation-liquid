@@ -53,7 +53,7 @@
       {%- render 'product-sticky-form', product: product -%}
     {%- endif -%}
 
-    <div class="container">
+    <div class="container-product">
       <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb text--xsmall text--subdued hidden-phone">
         <ol class="breadcrumb__list" role="list">
           <li class="breadcrumb__item">
@@ -73,6 +73,7 @@
       </nav>
 
       <!-- PRODUCT TOP PART -->
+
       <div class="product product--thumbnails-{{ section.settings.desktop_thumbnails_position }}">
         {%- render 'product-media', product: product -%}
         {%- render 'product-info', product: product, update_url: true -%}
@@ -276,6 +277,23 @@
       ]
     },
     {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "text",
+          "id": "content",
+          "label": "Content",
+          "default": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        }
+      ]
+    },
+    {
       "type": "quantity_selector",
       "name": "Quantity selector",
       "limit": 1
@@ -324,6 +342,11 @@
       "limit": 1
     },
     {
+      "type": "more_info",
+      "name": "More info",
+      "limit": 1
+    },
+    {
       "type": "inventory",
       "name": "Inventory",
       "limit": 1,
@@ -348,6 +371,36 @@
           "type": "richtext",
           "id": "text",
           "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "name": "Accordion",
+      "settings": [
+        {
+          "type": "text",
+          "id": "accordion_title_1",
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "type": "text",
+          "id": "accordion_title_2",
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "type": "text",
+          "id": "accordion_title_3",
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "type": "text",
+          "id": "accordion_title_4",
+          "label": "Title",
+          "default": "Title"
         }
       ]
     },

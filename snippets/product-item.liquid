@@ -12,7 +12,7 @@
   {%- capture product_labels -%}
     {%- for tag in product.tags -%}
       {%- if tag contains '__label' -%}
-        <span class="label label--custom">{{ tag | split: '__' | first }}</span>
+        <span class="label label--custom">{{ tag | remove: '__label' }}</span>
       {%- endif -%}
     {%- endfor -%}
 
@@ -115,7 +115,7 @@
         {%- endunless -%}
       {%- endif -%}
 
-      <a href="{{ product.url }}" class="product-item-meta__title h6">{{ product.title }}</a>
+      <a href="{{ product.url }}" class="product-item-meta__title h6">{{ product.title }} <span class="diamond"></span> {{ product.metafields.custom.rest_of_title }}</a>
 
       <p>{{ product.metafields.custom.description.value }}</p>
 

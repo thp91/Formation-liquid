@@ -130,7 +130,7 @@
             {%- endif -%}
           {%- endcapture -%}
 
-          {%- if blog_post_info != blank -%}
+          {%- if blog_post_info != blank and blog.title == "Lifestyle" -%}
             <div class="article__info">
               {{- blog_post_info -}}
             </div>

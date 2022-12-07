@@ -1,3 +1,5 @@
+{% unless blog.title == "Actifs" %}
+
 <style>
   #shopify-section-{{ section.id }} {
     {%- if section.settings.blog_header_text_color == 'rgba(0,0,0,0)' -%}
@@ -36,6 +38,7 @@
     </ol>
   </nav>
 
+
   {%- if article.image -%}
     {%- comment -%}Performance note: this image must not be lazyloaded as it contributes to the LCP{%- endcomment -%}
     <div class="article__image-wrapper {% if article.image.aspect_ratio >= 1 %}article__image-wrapper--square{% else %}article__image-wrapper--tall{% endif %}">
@@ -46,18 +49,24 @@
 
   <div class="article__header-content text-container">
     {%- if section.settings.show_category and article.tags.size > 0 -%}
-      <a href="{{ blog.url }}/tagged/{{ article.tags.first | handle }}" class="article__category heading heading--small">{{ article.tags.first }}</a>
+      <a href="{{ blog.url }}" class="label label--custom">{{ blog.title }}</a>
+      <a href="{{ blog.url }}/tagged/{{ article.tags.first | handle }}" class="label label--custom">{{ article.tags.first }}</a>
     {%- endif -%}
+
 
     <h1 class="article__title heading h1">{{ article.title }}</h1>
 
     {%- if article.excerpt != blank -%}
       <div class="article__excerpt text--large">
         {{- article.excerpt -}}
+        {{ blog.title }}
       </div>
     {%- endif -%}
   </div>
+
 </blog-post-header>
+
+{% endunless %}
 
 {%- schema %}
 {

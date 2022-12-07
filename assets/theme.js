@@ -6338,3 +6338,113 @@
 * tabbable 5.2.1
 * @license MIT, https://github.com/focus-trap/tabbable/blob/master/LICENSE
 */
+
+// ingredients page produit
+
+if (document.querySelectorAll('.shopify-section--ingredients').length > 0) {
+  var ingredientsCategories = document.querySelectorAll('.ingredients__categories');
+  var ingredientsContent = document.querySelectorAll('.ingredients__content');
+  for (let i = 0; i < ingredientsCategories.length; i++) {
+    ingredientsCategories[i].addEventListener('click', function(event){
+      var openAccordions = document.querySelectorAll('.ingredients__content.open');
+      var activeCategories = document.querySelectorAll('.ingredients__categories.active');
+      for (var x = 0; x < openAccordions.length; x++) {
+        openAccordions[x].classList.remove('open');
+      }
+      for (var x = 0; x < activeCategories.length; x++) {
+        activeCategories[x].classList.remove('active');
+      }
+      ingredientsContent[i].classList.add('open');
+      ingredientsCategories[i].classList.add('active');
+      ingredientsContent[i].querySelector('.ingredients__content-container').scrollTo(0,0);
+      if (ingredientsContent[i].querySelectorAll('.ingredients__content-container .ingredients__content-button').length > 0) {
+        ingredientsContent[i].querySelector('.ingredients__content-container .ingredients__content-button.active').classList.remove('active');
+        ingredientsContent[i].querySelectorAll('.ingredients__content-container .ingredients__content-button')[0].classList.add('active');
+      }
+    })
+  }
+
+  // 
+
+  var contentTitle = document.querySelector('.ingredients__content.open').querySelectorAll(".ingredients__content-title");
+  for (let y = 0; y < contentTitle.length; y++) {
+    
+    var elem = document.querySelector('.ingredients__content.open').querySelectorAll(".ingredients__content-title");
+    var elemContent = document.querySelector('.ingredients__content.open').querySelectorAll(".ingredients__accordion-content");
+    var topPos = elem[y].offsetTop;
+    var contentButtons = document.querySelector('.ingredients__content.open').querySelectorAll(".ingredients__content-button")
+    contentButtons[0].classList.add('active');
+
+    contentButtons[y].onclick = function () {
+      console.log(elem[y].offsetTop);
+      var openContainer = document.querySelector('.ingredients__content.open');
+      scrollTo(document.querySelector('.ingredients__content.open > .ingredients__content-container'), (elem[y].offsetTop-openContainer.offsetTop)-100, 600); 
+      var activeButtons = document.querySelector('.ingredients__content.open').querySelectorAll('.ingredients__content-button.active');
+      for (var s = 0; s < activeButtons.length; s++) {
+        activeButtons[s].classList.remove('active');
+      }
+      contentButtons[y].classList.add('active');
+    }
+
+    function scrollTo(element, to, duration) {
+
+      console.log(element);
+      console.log(to);
+      console.log(duration);
+      var start = element.scrollTop,
+          change = to - start,
+          currentTime = 0,
+          increment = 20;
+          
+      var animateScroll = function(){        
+          currentTime += increment;
+          var val = Math.easeInOutQuad(currentTime, start, change, duration);
+          element.scrollTop = val;
+          if(currentTime < duration) {
+              setTimeout(animateScroll, increment);
+          }
+      };
+      animateScroll();
+    }
+
+    //t = current time
+    //b = start value
+    //c = change in value
+    //d = duration
+    Math.easeInOutQuad = function (t, b, c, d) {
+      t /= d/2;
+      if (t < 1) return c/2*t*t + b;
+      t--;
+      return -c/2 * (t*(t-2) - 1) + b;
+    };
+
+    // accordion mobile
+
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      elem[0].classList.add('active');
+      elemContent[0].classList.add('open');
+      elem[y].addEventListener('click', function() {
+        var activeElem = document.querySelector('.ingredients__content.open').querySelectorAll(".ingredients__content-title.active");
+        var activeElemContent = document.querySelector('.ingredients__content.open').querySelectorAll(".ingredients__accordion-content.open");
+        for (var v = 0; v < activeElem.length; v++) {
+          activeElem[v].classList.remove('active');
+          if (activeElemContent[v].querySelectorAll('.ingredients__readmore-button.hide').length > 0) {
+            activeElemContent[v].querySelector('.ingredients__readmore-button.hide').classList.remove('hide');
+          }
+          activeElemContent[v].classList.remove('open');
+        }
+        elemContent[y].classList.add('open');
+        this.classList.add('active');
+      });
+
+
+      var readMoreButton = document.querySelector('.ingredients__content.open').querySelectorAll('.ingredients__readmore-button');
+      for (l = 0; l < readMoreButton.length; l++) {
+        readMoreButton[l].addEventListener('click', function() {
+          this.classList.add('hide');
+        })
+      }
+    }
+
+  }
+}

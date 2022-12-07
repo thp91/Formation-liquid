@@ -630,7 +630,7 @@ margin: 0;
 
 @media screen and (min-width: 999px){
 .image-with-text-block__content-ingredients{
-  padding: 100px 20px !important;
+  padding: 90px 40px !important;
 }
 
 }
@@ -1895,6 +1895,10 @@ p a:not(.button),
 .text-container .heading--small,
 .rte .heading--small {
   margin: 10px 0;
+}
+
+.bold{
+  font-weight: 700;
 }
 
 .text-container .heading--xsmall,
@@ -10533,7 +10537,6 @@ input:checked + .popover__choice-label::after,
 
 .mega-menu__image-push {
   width: 180px;
-  text-align: center;
 }
 
 .mega-menu__image-push:only-child {
